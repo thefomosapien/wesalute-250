@@ -1,3 +1,105 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ── Scrollbar ─────────────────────────────────────────────────────── */
+@layer base {
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #001E33; }
+  ::-webkit-scrollbar-thumb { background: #C9922A; border-radius: 4px; }
+  body { overflow-x: hidden; }
+}
+
+/* ── Keyframes ─────────────────────────────────────────────────────── */
+@keyframes float-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 0.85; }
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+/* ── Utility classes ───────────────────────────────────────────────── */
+@layer utilities {
+  .reveal        { animation: float-in 1s ease-out backwards; }
+  .reveal-1      { animation-delay: 0.1s; }
+  .reveal-2      { animation-delay: 0.25s; }
+  .reveal-3      { animation-delay: 0.4s; }
+  .reveal-4      { animation-delay: 0.55s; }
+  .glow          { animation: glow-pulse 4s ease-in-out infinite; }
+
+  .underline-mint {
+    background-image: linear-gradient(#B5DFD0, #B5DFD0);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    padding-bottom: 2px;
+  }
+}
+
+/* ── Component classes ─────────────────────────────────────────────── */
+@layer components {
+  .hover-lift {
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s;
+  }
+  .hover-lift:hover { transform: translateY(-4px); }
+
+  .merch-card {
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .merch-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 196, 62, 0.67) !important;
+  }
+  .merch-card:hover .merch-mark { transform: scale(1.08); }
+
+  .cta {
+    font-family: var(--font-barlow-condensed), sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 18px 36px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .cta-gold {
+    background: #FFC43E;
+    color: #001E33;
+  }
+  .cta-gold:hover {
+    background: #F5D98A;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(255, 196, 62, 0.27);
+  }
+  .cta-ghost {
+    background: transparent;
+    color: #F4F0E6;
+    border: 1px solid rgba(244, 240, 230, 0.27);
+  }
+  .cta-ghost:hover {
+    border-color: #FFC43E;
+    color: #FFC43E;
+  }
+}
+
+/* ── Responsive overrides ─────────────────────────────────────────── */
+@media (max-width: 880px) {
+  .timeline-row    { grid-template-columns: 1fr !important; }
+  .timeline-side-right { order: 2; }
+  .timeline-side-left  { order: 1; }
+  .hero-grid       { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .merch-grid-3    { grid-template-columns: 1fr !important; }
+  .seven-grid      { grid-template-columns: 1fr !important; }
+}
