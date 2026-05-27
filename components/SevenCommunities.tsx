@@ -14,11 +14,11 @@ export function SevenCommunities() {
 
       <div className="max-w-[1200px] mx-auto relative">
         <div className="mb-[72px]">
-          <Eyebrow color="#B5DFD0">Service Through The Centuries</Eyebrow>
+          <Eyebrow color="#FFC43E">Service Through The Centuries</Eyebrow>
           <SectionTitle>
             Seven communities. <br className="hidden sm:block" />
             One country.{" "}
-            <Italic color="#B5DFD0">250 years of showing up.</Italic>
+            <Italic color="#FFC43E">250 years of showing up.</Italic>
           </SectionTitle>
           <p className="text-[1.1rem] leading-[1.65] text-cream mt-7 max-w-[640px]" style={{ opacity: 0.78 }}>
             Service has never been a single uniform. The first 250 years were
@@ -47,7 +47,7 @@ export function SevenCommunities() {
               <div className="absolute top-4 right-5 font-display font-bold text-[1.4rem] text-gold" style={{ opacity: 0.5 }}>
                 0{i + 1}
               </div>
-              <Star size={20} color="#B5DFD0" style={{ marginBottom: "20px" }} />
+              <Star size={20} color="#FFC43E" style={{ marginBottom: "20px" }} />
               <h3 className="font-display font-bold text-[1.4rem] text-cream mb-2.5 leading-[1.15]">
                 {comm.name}
               </h3>

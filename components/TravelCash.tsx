@@ -34,7 +34,7 @@ export function TravelCash() {
       {/* Gold/mint accent stripe */}
       <div
         className="absolute left-0 top-0 bottom-0 w-1.5"
-        style={{ background: "linear-gradient(#FFC43E, #B5DFD0, #FFC43E)" }}
+        style={{ background: "linear-gradient(#FFC43E, #C9922A, #FFC43E)" }}
       />
 
       <div className="max-w-[1200px] mx-auto">

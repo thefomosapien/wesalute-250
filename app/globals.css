@@ -36,7 +36,7 @@
   .glow          { animation: glow-pulse 4s ease-in-out infinite; }
 
   .underline-mint {
-    background-image: linear-gradient(#B5DFD0, #B5DFD0);
+    background-image: linear-gradient(#FFC43E, #FFC43E);
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: 100% 2px;

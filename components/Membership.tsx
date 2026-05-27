@@ -31,7 +31,7 @@ export function Membership() {
             >
               The brand says <br className="hidden sm:block" />
               thank you.{" "}
-              <Italic color="#B5DFD0">The membership proves it.</Italic>
+              <Italic color="#FFC43E">The membership proves it.</Italic>
             </h2>
             <p
               className="text-[1.08rem] leading-[1.65] text-cream mb-8"
@@ -91,7 +91,7 @@ export function Membership() {
                 +
               </span>
             </div>
-            <div className="font-display italic text-[1.3rem] text-mint mt-1">
+            <div className="font-display italic text-[1.3rem] text-gold mt-1">
               members and counting.
             </div>
 

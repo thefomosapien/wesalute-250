@@ -18,6 +18,21 @@ export function ThroughLine() {
           <Italic color="#FFC43E">of 250 years.</Italic>
         </SectionTitle>
 
+        {/* Co-brand lockup */}
+        <div
+          className="mt-10 flex items-center justify-center py-10 px-8"
+          style={{ background: "#000F1C", border: "1px solid #163756" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logos/wesalute-america250.svg"
+            alt="WeSalute × America 250"
+            width={560}
+            height={68}
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        </div>
+
         <div className="grid gap-12 mt-12 hero-grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
           <p
             className="font-display italic font-normal text-[1.4rem] leading-[1.5] text-cream pl-6"

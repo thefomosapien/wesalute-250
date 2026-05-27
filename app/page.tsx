@@ -15,8 +15,8 @@ export default function HomePage() {
       <Nav />
       <Hero />
       <ThroughLine />
-      <SharedHistory />
       <SevenCommunities />
+      <SharedHistory />
       <TravelCash />
       <Membership />
       <Collection />

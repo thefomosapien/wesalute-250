@@ -3,12 +3,6 @@ import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
 import { America250Logo } from "./America250Logo";
 
-const stats = [
-  ["250", "Numbered shirts"],
-  ["7", "Communities of service"],
-  ["3M+", "WeSalute members"],
-  ["1", "Real Thank You®"],
-] as const;
 
 export function Hero() {
   return (
@@ -48,7 +42,7 @@ export function Hero() {
         {/* Left — copy */}
         <div>
           <div className="reveal reveal-1">
-            <Eyebrow color="#B5DFD0">
+            <Eyebrow color="#FFC43E">
               WeSalute × America 250 · Exclusive Collaboration
             </Eyebrow>
           </div>
@@ -57,7 +51,8 @@ export function Hero() {
             className="reveal reveal-2 font-display font-bold leading-[0.96] tracking-[-0.035em] text-cream my-7"
             style={{ fontSize: "clamp(3.2rem, 7vw, 6.2rem)" }}
           >
-            250 Years <Italic color="#B5DFD0">of</Italic> Service.
+            250 Years of{" "}
+            <span style={{ color: "#FFC43E" }}>Service.</span>
             <br className="hidden sm:block" />
             One Real <Italic color="#FFC43E">Thank You.</Italic>
           </h1>
@@ -79,22 +74,6 @@ export function Hero() {
             <button className="cta cta-ghost">Claim $250 Travel Cash</button>
           </div>
 
-          {/* Stats strip */}
-          <div
-            className="reveal reveal-4 mt-[72px] pt-8 grid gap-6 stats-grid"
-            style={{ borderTop: "1px solid #163756" }}
-          >
-            {stats.map(([n, l]) => (
-              <div key={l}>
-                <div className="font-display font-bold text-[2.2rem] text-gold leading-none mb-2">
-                  {n}
-                </div>
-                <div className="font-mono text-[10px] tracking-[0.2em] text-mint uppercase">
-                  {l}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Right — America 250 mark card */}
@@ -154,9 +133,14 @@ export function Hero() {
               <div className="font-mono text-[9px] tracking-[0.32em] uppercase font-semibold text-americaRedDeep">
                 Presented By
               </div>
-              <div className="font-condensed font-black text-[20px] tracking-[0.32em] text-americaNavy">
-                WESALUTE
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logos/wesalute-navy.svg"
+                alt="WeSalute"
+                width={120}
+                height={65}
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
               <div className="font-display italic text-[13px] text-americaRedDeep" style={{ opacity: 0.85 }}>
                 A Real Thank You.®
               </div>
@@ -166,7 +150,7 @@ export function Hero() {
       </div>
 
       {/* Scroll cue */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 font-mono text-[10px] tracking-[0.32em] text-mint uppercase opacity-60">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 font-mono text-[10px] tracking-[0.32em] text-cream uppercase opacity-60">
         <span>The Story Below</span>
         <span className="text-[18px]">↓</span>
       </div>

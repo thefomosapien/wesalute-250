@@ -65,7 +65,7 @@ export function Collection() {
         <div className="mb-20">
           <div className="flex items-baseline justify-between mb-8 flex-wrap gap-3">
             <div>
-              <div className="font-mono text-[11px] tracking-[0.3em] text-mint uppercase">
+              <div className="font-mono text-[11px] tracking-[0.3em] text-gold uppercase">
                 Open Collection · Tier 01
               </div>
               <h3 className="font-display font-bold text-[2rem] text-cream mt-1.5">
@@ -121,7 +121,7 @@ export function Collection() {
                         style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 16, fontWeight: 700 }}>
                         SEVEN
                       </text>
-                      <text x="80" y="94" textAnchor="middle" fill="#B5DFD0"
+                      <text x="80" y="94" textAnchor="middle" fill="#FFC43E"
                         style={{ fontFamily: "var(--font-barlow-condensed), sans-serif", fontSize: 9, letterSpacing: "0.32em", fontWeight: 700 }}>
                         COMMUNITIES
                       </text>
@@ -142,7 +142,7 @@ export function Collection() {
                   )}
                   <div
                     className="absolute top-4 left-4 font-mono text-[10px] tracking-[0.24em] uppercase"
-                    style={{ color: i === 0 ? "#8E1023" : "#B5DFD0" }}
+                    style={{ color: i === 0 ? "#8E1023" : "#FFC43E" }}
                   >
                     {m.tag}
                   </div>
@@ -251,7 +251,7 @@ export function Collection() {
 
             {/* Right — copy */}
             <div className="flex flex-col justify-center px-6 py-10 md:px-12 md:py-[60px]">
-              <div className="font-mono text-[10px] tracking-[0.3em] text-mint uppercase mb-3">
+              <div className="font-mono text-[10px] tracking-[0.3em] text-gold uppercase mb-3">
                 {merch250.type}
               </div>
               <h3 className="font-display font-bold text-[2.4rem] text-cream leading-[1.05] tracking-[-0.02em] mb-5">
@@ -290,7 +290,7 @@ export function Collection() {
         {/* ── TIER 3 — Member Edition ── */}
         <div>
           <div className="mb-8">
-            <div className="font-mono text-[11px] tracking-[0.3em] text-mint uppercase">
+            <div className="font-mono text-[11px] tracking-[0.3em] text-gold uppercase">
               Members Only · Tier 03
             </div>
             <h3 className="font-display font-bold text-[2rem] text-cream mt-1.5">
@@ -338,7 +338,7 @@ export function Collection() {
               >
                 <Star size={20} color="#FFC43E" />
                 <div style={{ fontSize: "0.8rem", margin: "6px 0 2px" }}>MEMBER</div>
-                <div style={{ fontSize: "0.55rem", letterSpacing: "0.18em", color: "#B5DFD0" }}>
+                <div style={{ fontSize: "0.55rem", letterSpacing: "0.18em", color: "#FFC43E" }}>
                   EDITION
                 </div>
               </div>
@@ -346,7 +346,7 @@ export function Collection() {
 
             {/* Right — copy */}
             <div>
-              <div className="font-mono text-[10px] tracking-[0.3em] text-mint uppercase mb-2.5">
+              <div className="font-mono text-[10px] tracking-[0.3em] text-gold uppercase mb-2.5">
                 {merchMember.type}
               </div>
               <h3 className="font-display font-bold text-[1.7rem] text-cream mb-4 leading-[1.2]">
@@ -363,8 +363,8 @@ export function Collection() {
                   border: "1px solid rgba(181,223,208,0.27)",
                 }}
               >
-                <Star size={11} color="#B5DFD0" />
-                <span className="font-mono text-[11px] tracking-[0.24em] text-mint uppercase">
+                <Star size={11} color="#FFC43E" />
+                <span className="font-mono text-[11px] tracking-[0.24em] text-gold uppercase">
                   {merchMember.price} · WeSalute+ verified only
                 </span>
               </div>
@@ -372,7 +372,7 @@ export function Collection() {
               <div>
                 <button
                   className="cta cta-ghost"
-                  style={{ borderColor: "#B5DFD0", color: "#B5DFD0" }}
+                  style={{ borderColor: "#FFC43E", color: "#FFC43E" }}
                 >
                   Become A Member To Unlock
                   <span className="font-display text-[16px]">→</span>

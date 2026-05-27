@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CoBrandLockup } from "./CoBrandLockup";
 
 const navLinks = ["Story", "Communities", "Travel Cash", "Collection"];
 
@@ -31,15 +30,15 @@ export function Nav() {
       {/* Header row */}
       <div className="px-8 py-4">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <CoBrandLockup height={26} color="#F4F0E6" />
-            <span className="hidden sm:block text-slateLine text-sm mx-1">
-              |
-            </span>
-            <span className="hidden sm:block font-mono text-[11px] tracking-[0.24em] text-mint uppercase">
-              The Campaign
-            </span>
-          </div>
+          {/* Co-brand lockup logo */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logos/wesalute-america250.svg"
+            alt="WeSalute × America 250"
+            width={216}
+            height={26}
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
 
           {/* Desktop nav */}
           <div className="hidden md:flex gap-8 items-center">
