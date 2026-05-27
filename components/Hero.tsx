@@ -13,7 +13,7 @@ const stats = [
 export function Hero() {
   return (
     <section
-      className="relative min-h-screen px-8 pt-[140px] pb-[100px] overflow-hidden"
+      className="relative min-h-screen px-8 pt-24 md:pt-[140px] pb-16 md:pb-[100px] overflow-hidden"
       style={{
         background:
           "radial-gradient(ellipse at 75% 30%, #0B2842 0%, #001E33 50%, #000F1C 100%)",
@@ -58,7 +58,7 @@ export function Hero() {
             style={{ fontSize: "clamp(3.2rem, 7vw, 6.2rem)" }}
           >
             250 Years <Italic color="#B5DFD0">of</Italic> Service.
-            <br />
+            <br className="hidden sm:block" />
             One Real <Italic color="#FFC43E">Thank You.</Italic>
           </h1>
 
@@ -81,11 +81,8 @@ export function Hero() {
 
           {/* Stats strip */}
           <div
-            className="reveal reveal-4 mt-[72px] pt-8 grid gap-6"
-            style={{
-              borderTop: "1px solid #163756",
-              gridTemplateColumns: "repeat(4, 1fr)",
-            }}
+            className="reveal reveal-4 mt-[72px] pt-8 grid gap-6 stats-grid"
+            style={{ borderTop: "1px solid #163756" }}
           >
             {stats.map(([n, l]) => (
               <div key={l}>
@@ -116,7 +113,7 @@ export function Hero() {
 
           {/* Card with corner ornaments */}
           <div
-            className="relative z-[2]"
+            className="relative z-[2] max-w-full"
             style={{
               padding: "24px 24px 20px",
               background: "#F4F0E6",

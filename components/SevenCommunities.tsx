@@ -8,7 +8,7 @@ export function SevenCommunities() {
   return (
     <section
       id="communities"
-      className="relative px-8 py-[140px] bg-slate overflow-hidden"
+      className="relative px-8 py-20 md:py-[140px] bg-slate overflow-hidden"
     >
       <StarField count={50} opacity={0.14} />
 
@@ -16,7 +16,7 @@ export function SevenCommunities() {
         <div className="mb-[72px]">
           <Eyebrow color="#B5DFD0">Service Through The Centuries</Eyebrow>
           <SectionTitle>
-            Seven communities. <br />
+            Seven communities. <br className="hidden sm:block" />
             One country.{" "}
             <Italic color="#B5DFD0">250 years of showing up.</Italic>
           </SectionTitle>

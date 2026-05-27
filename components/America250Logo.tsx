@@ -20,7 +20,7 @@ export function America250Logo({
         alt="America 250 — One Nation. 250 Years of Service."
         width={size}
         height={height}
-        style={{ display: "block" }}
+        style={{ display: "block", maxWidth: "100%", height: "auto" }}
         priority
       />
     );

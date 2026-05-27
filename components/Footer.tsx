@@ -7,7 +7,7 @@ export function Footer() {
       className="px-8 py-12 bg-slateDeep"
       style={{ borderTop: "1px solid #163756" }}
     >
-      <div className="max-w-[1280px] mx-auto flex justify-between items-center flex-wrap gap-5">
+      <div className="max-w-[1280px] mx-auto flex justify-center md:justify-between items-center flex-wrap gap-6 md:gap-5">
         <div>
           <CoBrandLockup height={24} color="#F4F0E6" />
           <div

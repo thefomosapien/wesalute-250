@@ -5,7 +5,7 @@ import { Italic } from "./SectionTitle";
 export function FinalSalute() {
   return (
     <section
-      className="relative px-8 py-[120px] overflow-hidden"
+      className="relative px-8 py-16 md:py-[120px] overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #001E33 0%, #000F1C 100%)",
       }}
@@ -21,7 +21,7 @@ export function FinalSalute() {
           className="font-display font-bold leading-[1.05] tracking-[-0.025em] text-cream mt-5 mb-6"
           style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)" }}
         >
-          The country turns 250 in July. <br />
+          The country turns 250 in July. <br className="hidden sm:block" />
           <Italic color="#FFC43E">We close the chapter on Veterans Day.</Italic>
         </h2>
 
@@ -57,7 +57,7 @@ export function FinalSalute() {
           <p className="font-display font-medium text-[1.2rem] text-cream mb-5 leading-[1.3]">
             Get notified when the 250 collection drops. Members get the first 48 hours.
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <input
               type="email"
               placeholder="your@email.com"

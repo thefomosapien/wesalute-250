@@ -42,6 +42,9 @@
     background-size: 100% 2px;
     padding-bottom: 2px;
   }
+
+  .stats-grid          { grid-template-columns: repeat(4, 1fr); }
+  .travel-cash-numeral { font-size: clamp(8rem, 16vw, 12rem); }
 }
 
 /* ── Component classes ─────────────────────────────────────────────── */
@@ -95,6 +98,13 @@
 }
 
 /* ── Responsive overrides ─────────────────────────────────────────── */
+/* ── Mobile overrides ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .stats-grid          { grid-template-columns: repeat(2, 1fr) !important; }
+  .travel-cash-numeral { font-size: clamp(4rem, 20vw, 6rem) !important; }
+  .cta                 { letter-spacing: 0.14em; padding: 16px 24px; }
+}
+
 @media (max-width: 880px) {
   .timeline-row    { grid-template-columns: 1fr !important; }
   .timeline-side-right { order: 2; }
@@ -102,4 +112,7 @@
   .hero-grid       { grid-template-columns: 1fr !important; gap: 32px !important; }
   .merch-grid-3    { grid-template-columns: 1fr !important; }
   .seven-grid      { grid-template-columns: 1fr !important; }
+  .numbered-grid   { grid-template-columns: 1fr !important; }
+  .member-grid     { grid-template-columns: 1fr !important; }
+  .timeline-spine  { display: none !important; }
 }

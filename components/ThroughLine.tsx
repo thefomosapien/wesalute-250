@@ -5,7 +5,7 @@ export function ThroughLine() {
   return (
     <section
       id="story"
-      className="relative px-8 py-[140px]"
+      className="relative px-8 py-20 md:py-[140px]"
       style={{
         background: "linear-gradient(180deg, #000F1C 0%, #001E33 100%)",
         borderTop: "1px solid #163756",
@@ -14,7 +14,7 @@ export function ThroughLine() {
       <div className="max-w-[920px] mx-auto">
         <Eyebrow color="#FFC43E">The Through-Line</Eyebrow>
         <SectionTitle>
-          Service is the connective <br /> tissue{" "}
+          Service is the connective <br className="hidden sm:block" /> tissue{" "}
           <Italic color="#FFC43E">of 250 years.</Italic>
         </SectionTitle>
 

@@ -39,7 +39,7 @@ export function Collection() {
   return (
     <section
       id="collection"
-      className="px-8 pt-[140px] pb-20 bg-slate"
+      className="px-8 pt-20 md:pt-[140px] pb-20 bg-slate"
       style={{ borderTop: "1px solid #163756" }}
     >
       <div className="max-w-[1280px] mx-auto">
@@ -49,7 +49,7 @@ export function Collection() {
             The Collection
           </Eyebrow>
           <SectionTitle>
-            Built to be earned. <br />
+            Built to be earned. <br className="hidden sm:block" />
             <Italic color="#FFC43E">Made to be worn.</Italic>
           </SectionTitle>
           <p
@@ -182,7 +182,7 @@ export function Collection() {
           </div>
 
           <div
-            className="merch-card relative grid overflow-hidden"
+            className="merch-card numbered-grid relative grid overflow-hidden"
             style={{
               background: "linear-gradient(145deg, #0B2842 0%, #000F1C 100%)",
               border: "2px solid rgba(255,196,62,0.53)",
@@ -194,7 +194,7 @@ export function Collection() {
 
             {/* Left — visual + hangtag */}
             <div
-              className="merch-mark relative flex flex-col items-center justify-center min-h-[440px] px-12 py-[60px]"
+              className="merch-mark relative flex flex-col items-center justify-center min-h-[320px] md:min-h-[440px] px-6 py-10 md:px-12 md:py-[60px]"
               style={{
                 background: "radial-gradient(ellipse at center, #0B2842 0%, #000F1C 100%)",
                 transition: "transform 0.5s",
@@ -250,7 +250,7 @@ export function Collection() {
             </div>
 
             {/* Right — copy */}
-            <div className="flex flex-col justify-center px-12 py-[60px]">
+            <div className="flex flex-col justify-center px-6 py-10 md:px-12 md:py-[60px]">
               <div className="font-mono text-[10px] tracking-[0.3em] text-mint uppercase mb-3">
                 {merch250.type}
               </div>
@@ -299,7 +299,7 @@ export function Collection() {
           </div>
 
           <div
-            className="merch-card grid gap-12 items-center px-12 py-12"
+            className="merch-card member-grid grid gap-8 md:gap-12 items-center px-6 py-8 md:px-12 md:py-12"
             style={{
               background: "#0B2842",
               border: "1px solid rgba(181,223,208,0.33)",

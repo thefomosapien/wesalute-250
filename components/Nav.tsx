@@ -7,6 +7,7 @@ const navLinks = ["Story", "Communities", "Travel Cash", "Collection"];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80);
@@ -16,33 +17,106 @@ export function Nav() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-[100] px-8 py-4 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-[100] transition-all duration-300"
       style={{
-        background: scrolled ? "rgba(0,15,28,0.93)" : "transparent",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
-        borderBottom: scrolled ? "1px solid #163756" : "1px solid transparent",
+        background:
+          scrolled || menuOpen ? "rgba(0,15,28,0.97)" : "transparent",
+        backdropFilter: scrolled || menuOpen ? "blur(12px)" : "none",
+        borderBottom:
+          scrolled && !menuOpen
+            ? "1px solid #163756"
+            : "1px solid transparent",
       }}
     >
-      <div className="max-w-[1280px] mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <CoBrandLockup height={26} color="#F4F0E6" />
-          <span className="text-slateLine text-sm mx-1">|</span>
-          <span className="font-mono text-[11px] tracking-[0.24em] text-mint uppercase">
-            The Campaign
-          </span>
-        </div>
+      {/* Header row */}
+      <div className="px-8 py-4">
+        <div className="max-w-[1280px] mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <CoBrandLockup height={26} color="#F4F0E6" />
+            <span className="hidden sm:block text-slateLine text-sm mx-1">
+              |
+            </span>
+            <span className="hidden sm:block font-mono text-[11px] tracking-[0.24em] text-mint uppercase">
+              The Campaign
+            </span>
+          </div>
 
-        <div className="flex gap-8 items-center">
+          {/* Desktop nav */}
+          <div className="hidden md:flex gap-8 items-center">
+            {navLinks.map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
+                className="font-condensed text-[13px] font-semibold tracking-[0.18em] uppercase text-cream opacity-75 hover:opacity-100 hover:text-gold transition-all duration-200 no-underline"
+              >
+                {item}
+              </a>
+            ))}
+            <button
+              className="cta cta-gold"
+              style={{ padding: "12px 24px", fontSize: "12px" }}
+            >
+              Shop The Collection
+            </button>
+          </div>
+
+          {/* Hamburger */}
+          <button
+            className="md:hidden w-6 h-5 flex flex-col justify-between shrink-0"
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label="Toggle navigation menu"
+          >
+            <span
+              className="block w-full h-0.5 bg-cream origin-center transition-all duration-300"
+              style={{
+                transform: menuOpen
+                  ? "translateY(9px) rotate(45deg)"
+                  : "none",
+              }}
+            />
+            <span
+              className="block w-full h-0.5 bg-cream transition-all duration-300"
+              style={{ opacity: menuOpen ? 0 : 1 }}
+            />
+            <span
+              className="block w-full h-0.5 bg-cream origin-center transition-all duration-300"
+              style={{
+                transform: menuOpen
+                  ? "translateY(-9px) rotate(-45deg)"
+                  : "none",
+              }}
+            />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <div
+        className="md:hidden overflow-hidden"
+        style={{
+          maxHeight: menuOpen ? "360px" : "0",
+          transition: "max-height 0.3s ease-in-out",
+        }}
+      >
+        <div
+          className="px-8 py-6 flex flex-col gap-5"
+          style={{ borderTop: "1px solid #163756" }}
+        >
           {navLinks.map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
-              className="font-condensed text-[13px] font-semibold tracking-[0.18em] uppercase text-cream opacity-75 hover:opacity-100 hover:text-gold transition-all duration-200 no-underline"
+              className="font-condensed text-[16px] font-semibold tracking-[0.18em] uppercase text-cream opacity-80 hover:opacity-100 hover:text-gold transition-all duration-200 no-underline"
+              onClick={() => setMenuOpen(false)}
             >
               {item}
             </a>
           ))}
-          <button className="cta cta-gold" style={{ padding: "12px 24px", fontSize: "12px" }}>
+          <button
+            className="cta cta-gold"
+            onClick={() => setMenuOpen(false)}
+            style={{ fontSize: "13px", justifyContent: "center" }}
+          >
             Shop The Collection
           </button>
         </div>

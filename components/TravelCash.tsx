@@ -25,7 +25,7 @@ export function TravelCash() {
   return (
     <section
       id="travel-cash"
-      className="relative px-8 py-[140px] overflow-hidden"
+      className="relative px-8 py-20 md:py-[140px] overflow-hidden"
       style={{
         background:
           "radial-gradient(ellipse at 30% 50%, #0B2842 0%, #001E33 60%, #000F1C 100%)",
@@ -49,7 +49,7 @@ export function TravelCash() {
               className="font-display font-bold leading-[1.0] tracking-[-0.03em] text-cream mt-5 mb-6"
               style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}
             >
-              $250 in <Italic color="#FFC43E">FREE</Italic> <br />
+              $250 in <Italic color="#FFC43E">FREE</Italic> <br className="hidden sm:block" />
               Travel Cash.
             </h2>
             <p
@@ -98,9 +98,8 @@ export function TravelCash() {
 
           {/* Right — $250 hero card */}
           <div
-            className="relative text-center overflow-hidden"
+            className="relative text-center overflow-hidden px-5 py-10 md:px-10 md:py-[60px]"
             style={{
-              padding: "60px 40px",
               background: "#F4F0E6",
               border: "1px solid rgba(181,21,45,0.33)",
               boxShadow: "0 30px 60px rgba(0,0,0,0.3)",
@@ -153,8 +152,8 @@ export function TravelCash() {
               ).map(([digit, color]) => (
                 <span
                   key={digit + color}
-                  className="font-display font-extrabold tracking-[-0.06em]"
-                  style={{ fontSize: "clamp(8rem, 16vw, 12rem)", color }}
+                  className="font-display font-extrabold tracking-[-0.06em] travel-cash-numeral"
+                  style={{ color }}
                 >
                   {digit}
                 </span>
@@ -175,7 +174,7 @@ export function TravelCash() {
               className="font-display italic text-[1.05rem] text-americaNavy leading-[1.45]"
               style={{ opacity: 0.85 }}
             >
-              Because 250 years is worth more <br /> than a holiday sale.
+              Because 250 years is worth more <br className="hidden sm:block" /> than a holiday sale.
             </p>
           </div>
         </div>

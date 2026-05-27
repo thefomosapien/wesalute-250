@@ -12,7 +12,7 @@ const memberBenefits = [
 export function Membership() {
   return (
     <section
-      className="relative px-8 py-[140px]"
+      className="relative px-8 py-20 md:py-[140px]"
       style={{
         background: "linear-gradient(180deg, #000F1C 0%, #001E33 100%)",
       }}
@@ -29,7 +29,7 @@ export function Membership() {
               className="font-display font-bold leading-[1.05] tracking-[-0.025em] text-cream mt-5 mb-6"
               style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)" }}
             >
-              The brand says <br />
+              The brand says <br className="hidden sm:block" />
               thank you.{" "}
               <Italic color="#B5DFD0">The membership proves it.</Italic>
             </h2>

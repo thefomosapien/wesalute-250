@@ -6,7 +6,7 @@ import { timeline } from "@/lib/content";
 export function SharedHistory() {
   return (
     <section
-      className="relative px-8 py-[140px] text-slate"
+      className="relative px-8 py-20 md:py-[140px] text-slate"
       style={{ background: "#F7F1DF" }}
     >
       {/* Subtle paper texture overlay */}
@@ -46,7 +46,7 @@ export function SharedHistory() {
         <div className="relative">
           {/* Center spine */}
           <div
-            className="absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2"
+            className="timeline-spine absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2"
             style={{
               background:
                 "linear-gradient(rgba(142,16,35,0.67), rgba(0,30,51,0.53), rgba(142,16,35,0.67))",
@@ -120,7 +120,7 @@ export function SharedHistory() {
 
         {/* Closing quote */}
         <div
-          className="mt-10 px-10 py-8 bg-slate text-cream text-center"
+          className="mt-10 px-5 py-6 md:px-10 md:py-8 bg-slate text-cream text-center"
           style={{ borderTop: "3px solid #FFC43E" }}
         >
           <p className="font-display italic font-normal text-[1.4rem] leading-[1.4] max-w-[720px] mx-auto">
