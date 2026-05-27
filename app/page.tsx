@@ -1,5 +1,6 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
+import { CountdownBanner } from "@/components/CountdownBanner";
 import { ThroughLine } from "@/components/ThroughLine";
 import { SharedHistory } from "@/components/SharedHistory";
 import { SevenCommunities } from "@/components/SevenCommunities";
@@ -14,6 +15,7 @@ export default function HomePage() {
     <div className="bg-slate text-cream font-sans min-h-screen">
       <Nav />
       <Hero />
+      <CountdownBanner />
       <ThroughLine />
       <SevenCommunities />
       <SharedHistory />

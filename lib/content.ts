@@ -35,20 +35,12 @@ export const timeline: TimelineEntry[] = [
     weSalute: null,
   },
   {
-    year: "1863",
-    nation: "Gettysburg",
-    nationBody:
-      "Lincoln delivers 272 words that redefine what the nation is for: the unfinished work of the people who served and sacrificed to advance it.",
-    weSalute:
-      "Generations later, Scott and Lin Higgins would gift the Borough of Gettysburg its first statue of President Lincoln delivering the address — closing a personal loop with the country's founding.",
-  },
-  {
     year: "1967–68",
     nation: "Vietnam",
     nationBody:
       "A generation comes home to a country that wants to forget the war. The veterans of that era are met with no parades, no welcome, no thanks.",
     weSalute:
-      "Scott Higgins serves as a 2nd Lieutenant, U.S. Army, II Field Force. He returns to American soil without ceremony. Direct descendant of Capt. John Parker — the through-line from Lexington to Saigon runs through one family.",
+      "Scott Higgins serves as a 2nd Lieutenant, U.S. Army, II Field Force. He returns to American soil without ceremony.",
   },
   {
     year: "1981–85",
@@ -56,7 +48,7 @@ export const timeline: TimelineEntry[] = [
     nationBody:
       "New York City prepares its overdue welcome home. A 100-member commission is built to honor a generation the country had let down.",
     weSalute:
-      "Mayor Ed Koch asks Scott Higgins to spearhead the NYC Vietnam Veterans Memorial Commission. He co-chairs for five years. The commission builds NYC's first Vietnam Veterans Memorial, organizes the largest parade in city history, establishes a jobs program, and publishes Dear America: Letters Home from Vietnam — later an Emmy-winning HBO film seen by 75 million people.",
+      "Mayor Ed Koch asks Scott Higgins to co-chair the NYC Vietnam Veterans Memorial Commission. The commission builds NYC's first Vietnam Veterans Memorial, organizes the largest parade in city history, and publishes Dear America: Letters Home from Vietnam — an Emmy-winning HBO film.",
   },
   {
     year: "1999",

@@ -121,9 +121,7 @@ export function SharedHistory() {
                         Scott Higgins, co-founder of WeSalute, is a direct
                         descendant of Captain John Parker — the man who
                         assembled the Lexington militia and gave the order on
-                        that green in 1775. The drive to honor service
-                        didn&apos;t begin in 1999. It ran in the family long
-                        before that.
+                        that green in 1775.
                       </p>
                     </div>
                   )}
