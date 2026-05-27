@@ -55,7 +55,7 @@ export function Nav() {
               className="cta cta-gold"
               style={{ padding: "12px 24px", fontSize: "12px" }}
             >
-              Shop The Collection
+              Claim $250 Travel Cash
             </button>
           </div>
 
@@ -116,7 +116,7 @@ export function Nav() {
             onClick={() => setMenuOpen(false)}
             style={{ fontSize: "13px", justifyContent: "center" }}
           >
-            Shop The Collection
+            Claim $250 Travel Cash
           </button>
         </div>
       </div>

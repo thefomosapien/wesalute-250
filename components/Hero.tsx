@@ -68,10 +68,10 @@ export function Hero() {
 
           <div className="reveal reveal-4 flex gap-4 flex-wrap">
             <button className="cta cta-gold">
-              Shop The Collection
+              Claim $250 Travel Cash
               <span className="font-display text-[16px]">→</span>
             </button>
-            <button className="cta cta-ghost">Claim $250 Travel Cash</button>
+            <button className="cta cta-ghost">Shop The Collection</button>
           </div>
 
         </div>

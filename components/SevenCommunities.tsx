@@ -1,8 +1,15 @@
+import Image from "next/image";
 import { StarField } from "./StarField";
 import { Eyebrow } from "./Eyebrow";
 import { SectionTitle, Italic } from "./SectionTitle";
 import { Star } from "./Star";
 import { communities } from "@/lib/content";
+
+const servicePhotos = [
+  { src: "/images/military-3.png", label: "Military & Veterans" },
+  { src: "/images/medical-2.png", label: "Nurses & Medical Professionals" },
+  { src: "/images/teacher-student-2.png", label: "Teachers" },
+] as const;
 
 export function SevenCommunities() {
   return (
@@ -25,6 +32,36 @@ export function SevenCommunities() {
             built by people who served in seven different ways. This collection
             honors them all.
           </p>
+        </div>
+
+        {/* Service photos */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-14">
+          {servicePhotos.map(({ src, label }) => (
+            <div
+              key={label}
+              className="relative overflow-hidden"
+              style={{ height: "260px" }}
+            >
+              <Image
+                src={src}
+                alt={label}
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                sizes="(max-width: 640px) 100vw, 33vw"
+              />
+              <div
+                className="absolute bottom-0 left-0 right-0 px-4 py-3"
+                style={{
+                  background:
+                    "linear-gradient(transparent, rgba(0,15,28,0.82))",
+                }}
+              >
+                <div className="font-mono text-[10px] tracking-[0.24em] text-gold uppercase">
+                  {label}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div
