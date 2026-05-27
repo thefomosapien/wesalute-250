@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import { StarField } from "./StarField";
 import { Eyebrow } from "./Eyebrow";
@@ -34,34 +35,65 @@ export function SevenCommunities() {
           </p>
         </div>
 
-        {/* Service photos */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-14">
-          {servicePhotos.map(({ src, label }) => (
-            <div
-              key={label}
-              className="relative overflow-hidden"
-              style={{ height: "260px" }}
-            >
-              <Image
-                src={src}
-                alt={label}
-                fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
-                sizes="(max-width: 640px) 100vw, 33vw"
-              />
-              <div
-                className="absolute bottom-0 left-0 right-0 px-4 py-3"
-                style={{
-                  background:
-                    "linear-gradient(transparent, rgba(0,15,28,0.82))",
-                }}
-              >
-                <div className="font-mono text-[10px] tracking-[0.24em] text-gold uppercase">
-                  {label}
-                </div>
+        {/* Service photos — diagonal panels */}
+        <div
+          className="relative mb-14 overflow-hidden"
+          style={{ height: "360px", background: "#000F1C" }}
+        >
+          {/* Gold/crimson gradient line across top */}
+          <div
+            className="absolute top-0 left-0 right-0 z-10 pointer-events-none"
+            style={{
+              height: "2px",
+              background: "linear-gradient(90deg, #8E1023 0%, #FFC43E 50%, #8E1023 100%)",
+            }}
+          />
+
+          {servicePhotos.map(({ src, label }, i) => {
+            const S = 64;
+            const isFirst = i === 0;
+            const isLast = i === servicePhotos.length - 1;
+            const panelStyle: React.CSSProperties = {
+              position: "absolute",
+              top: 0,
+              bottom: 0,
+              zIndex: i + 1,
+              clipPath: isFirst
+                ? `polygon(0 0, 100% 0, calc(100% - ${S}px) 100%, 0 100%)`
+                : isLast
+                ? `polygon(${S}px 0, 100% 0, 100% 100%, 0 100%)`
+                : `polygon(${S}px 0, 100% 0, calc(100% - ${S}px) 100%, 0 100%)`,
+              ...(isFirst
+                ? { left: 0, width: `calc(33.34% + ${S}px)` }
+                : isLast
+                ? { left: `calc(${i * 33.33}% - ${i * S}px)`, right: 0 }
+                : {
+                    left: `calc(${i * 33.33}% - ${i * S}px)`,
+                    width: `calc(33.34% + ${S}px)`,
+                  }),
+            };
+            const positions = ["center 25%", "center 15%", "center 35%"];
+            return (
+              <div key={label} style={panelStyle}>
+                <Image
+                  src={src}
+                  alt={label}
+                  fill
+                  style={{ objectFit: "cover", objectPosition: positions[i] }}
+                  sizes="33vw"
+                />
+                {!isFirst && (
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background:
+                        "linear-gradient(to right, rgba(0,0,0,0.38) 0%, transparent 20%)",
+                    }}
+                  />
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div
