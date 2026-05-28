@@ -36,7 +36,7 @@ export function ThroughLine() {
         <div className="grid gap-12 mt-12 hero-grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
           <p
             className="font-display italic font-normal text-[1.4rem] leading-[1.5] text-cream pl-6"
-            style={{ borderLeft: "2px solid #FFC43E" }}
+            style={{ borderLeft: "2px solid #FFC43E", alignSelf: "start" }}
           >
             No country lasts 250 years by accident. Every chapter was held
             together by people who put service above self — in uniform, in

@@ -106,18 +106,14 @@ export function SharedHistory() {
                     </div>
                   ) : (
                     <div
-                      className="p-6 pr-7"
-                      style={{
-                        background: "rgba(142,16,35,0.07)",
-                        border: "1px solid rgba(142,16,35,0.22)",
-                        borderLeft: "3px solid #8E1023",
-                      }}
+                      className="bg-slate text-cream p-6 pr-7"
+                      style={{ borderLeft: "3px solid #FFC43E", boxShadow: "0 8px 24px rgba(0,0,0,0.12)" }}
                     >
-                      <div className="font-mono text-[11px] tracking-[0.28em] text-americaRedDeep uppercase font-semibold mb-2.5 flex items-center gap-2">
-                        <Star size={11} color="#8E1023" />
-                        The Bloodline
+                      <div className="font-mono text-[11px] tracking-[0.28em] text-gold uppercase font-semibold mb-2.5 flex items-center gap-2">
+                        <Star size={11} color="#FFC43E" />
+                        WeSalute
                       </div>
-                      <p className="text-[0.95rem] leading-[1.6] text-slate" style={{ opacity: 0.85 }}>
+                      <p className="text-[0.95rem] leading-[1.6] text-cream" style={{ opacity: 0.95 }}>
                         Scott Higgins, co-founder of WeSalute, is a direct
                         descendant of Captain John Parker — the man who
                         assembled the Lexington militia and gave the order on

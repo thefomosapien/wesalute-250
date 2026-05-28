@@ -42,9 +42,7 @@ export function Hero() {
         {/* Left — copy */}
         <div>
           <div className="reveal reveal-1">
-            <Eyebrow color="#FFC43E">
-              WeSalute × America 250 · Exclusive Collaboration
-            </Eyebrow>
+            <Eyebrow color="#FFC43E">WeSalute × America 250</Eyebrow>
           </div>
 
           <h1

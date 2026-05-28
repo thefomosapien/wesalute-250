@@ -87,17 +87,9 @@ export function CountdownBanner() {
             className="pulse-dot inline-block w-2 h-2 rounded-full shrink-0"
             style={{ background: "#B91C1C" }}
           />
-          <div className="flex flex-col leading-none">
-            <span className="font-condensed font-bold text-[1.05rem] tracking-[0.1em] text-cream uppercase">
-              $250 Travel Cash
-            </span>
-            <span
-              className="font-mono text-[9px] tracking-[0.26em] uppercase mt-0.5"
-              style={{ color: "#B91C1C" }}
-            >
-              Offer ends Jul 4, 2026
-            </span>
-          </div>
+          <span className="font-condensed font-bold text-[1.05rem] tracking-[0.1em] text-cream uppercase">
+            $250 Travel Cash
+          </span>
         </div>
 
         {/* Separator */}

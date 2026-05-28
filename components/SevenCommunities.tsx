@@ -99,9 +99,6 @@ export function SevenCommunities() {
                     : "transparent",
               }}
             >
-              <div className="absolute top-4 right-5 font-display font-bold text-[1.4rem] text-gold" style={{ opacity: 0.5 }}>
-                0{i + 1}
-              </div>
               <Star size={20} color="#FFC43E" style={{ marginBottom: "20px" }} />
               <h3 className="font-display font-bold text-[1.4rem] text-cream mb-2.5 leading-[1.15]">
                 {comm.name}
