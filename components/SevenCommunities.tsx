@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { StarField } from "./StarField";
 import { Eyebrow } from "./Eyebrow";
@@ -35,65 +34,52 @@ export function SevenCommunities() {
           </p>
         </div>
 
-        {/* Service photos — diagonal panels */}
-        <div
-          className="relative mb-14 overflow-hidden"
-          style={{ height: "360px", background: "#000F1C" }}
-        >
-          {/* Gold/crimson gradient line across top */}
-          <div
-            className="absolute top-0 left-0 right-0 z-10 pointer-events-none"
-            style={{
-              height: "2px",
-              background: "linear-gradient(90deg, #8E1023 0%, #FFC43E 50%, #8E1023 100%)",
-            }}
-          />
+        {/* Service photos — editorial asymmetric grid */}
+        <div className="photo-editorial-grid mb-14">
+          {/* Left: large hero — military */}
+          <div className="photo-editorial-left relative overflow-hidden">
+            <Image
+              src={servicePhotos[0].src}
+              alt={servicePhotos[0].label}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center 20%" }}
+              sizes="(max-width: 640px) 100vw, 60vw"
+            />
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to top, rgba(0,15,28,0.5) 0%, transparent 50%)" }}
+            />
+          </div>
 
-          {servicePhotos.map(({ src, label }, i) => {
-            const S = 64;
-            const isFirst = i === 0;
-            const isLast = i === servicePhotos.length - 1;
-            const panelStyle: React.CSSProperties = {
-              position: "absolute",
-              top: 0,
-              bottom: 0,
-              zIndex: i + 1,
-              clipPath: isFirst
-                ? `polygon(0 0, 100% 0, calc(100% - ${S}px) 100%, 0 100%)`
-                : isLast
-                ? `polygon(${S}px 0, 100% 0, 100% 100%, 0 100%)`
-                : `polygon(${S}px 0, 100% 0, calc(100% - ${S}px) 100%, 0 100%)`,
-              ...(isFirst
-                ? { left: 0, width: `calc(33.34% + ${S}px)` }
-                : isLast
-                ? { left: `calc(${i * 33.33}% - ${i * S}px)`, right: 0 }
-                : {
-                    left: `calc(${i * 33.33}% - ${i * S}px)`,
-                    width: `calc(33.34% + ${S}px)`,
-                  }),
-            };
-            const positions = ["center 25%", "center 15%", "center 35%"];
-            return (
-              <div key={label} style={panelStyle}>
-                <Image
-                  src={src}
-                  alt={label}
-                  fill
-                  style={{ objectFit: "cover", objectPosition: positions[i] }}
-                  sizes="33vw"
-                />
-                {!isFirst && (
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      background:
-                        "linear-gradient(to right, rgba(0,0,0,0.38) 0%, transparent 20%)",
-                    }}
-                  />
-                )}
-              </div>
-            );
-          })}
+          {/* Top right: medical */}
+          <div className="relative overflow-hidden">
+            <Image
+              src={servicePhotos[1].src}
+              alt={servicePhotos[1].label}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center 15%" }}
+              sizes="(max-width: 640px) 100vw, 40vw"
+            />
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to top, rgba(0,15,28,0.5) 0%, transparent 50%)" }}
+            />
+          </div>
+
+          {/* Bottom right: teachers */}
+          <div className="relative overflow-hidden">
+            <Image
+              src={servicePhotos[2].src}
+              alt={servicePhotos[2].label}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center 35%" }}
+              sizes="(max-width: 640px) 100vw, 40vw"
+            />
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to top, rgba(0,15,28,0.5) 0%, transparent 50%)" }}
+            />
+          </div>
         </div>
 
         <div

@@ -62,6 +62,9 @@
 
   .stats-grid          { grid-template-columns: repeat(4, 1fr); }
   .travel-cash-numeral { font-size: clamp(8rem, 16vw, 12rem); }
+
+  .photo-editorial-grid { display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: 210px 210px; gap: 8px; }
+  .photo-editorial-left { grid-row: span 2; }
 }
 
 /* ── Component classes ─────────────────────────────────────────────── */
@@ -117,9 +120,11 @@
 /* ── Responsive overrides ─────────────────────────────────────────── */
 /* ── Mobile overrides ─────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .stats-grid          { grid-template-columns: repeat(2, 1fr) !important; }
-  .travel-cash-numeral { font-size: clamp(4rem, 20vw, 6rem) !important; }
-  .cta                 { letter-spacing: 0.14em; padding: 16px 24px; }
+  .stats-grid             { grid-template-columns: repeat(2, 1fr) !important; }
+  .travel-cash-numeral    { font-size: clamp(4rem, 20vw, 6rem) !important; }
+  .cta                    { letter-spacing: 0.14em; padding: 16px 24px; }
+  .photo-editorial-grid   { grid-template-columns: 1fr !important; grid-template-rows: 240px 200px 200px !important; }
+  .photo-editorial-left   { grid-row: span 1 !important; }
 }
 
 @media (max-width: 880px) {
