@@ -59,8 +59,7 @@ export function Hero() {
             className="reveal reveal-3 text-[1.15rem] leading-[1.65] text-cream max-w-[540px] mb-10"
             style={{ opacity: 0.82 }}
           >
-            Every other brand will print "250" on a tee. We earned it. For
-            every one of America&apos;s first 250 years, this country has been
+            For every one of America&apos;s first 250 years, this country has been
             built by people who serve. WeSalute has spent its history saying so.
           </p>
 
@@ -140,7 +139,7 @@ export function Hero() {
                 style={{ maxWidth: "100%", height: "auto" }}
               />
               <div className="font-display italic text-[13px] text-americaRedDeep" style={{ opacity: 0.85 }}>
-                A Real Thank You.®
+                A Real Thank You®
               </div>
             </div>
           </div>

@@ -68,7 +68,7 @@ export function Footer() {
 
           {/* Center: tagline */}
           <div className="font-display italic text-[1.05rem] text-gold text-center">
-            A Real Thank You.®
+            A Real Thank You
           </div>
 
           {/* Right: social + date mark */}

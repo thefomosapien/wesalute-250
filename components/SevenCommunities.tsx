@@ -124,7 +124,7 @@ export function SevenCommunities() {
               ALL UNDER ONE BANNER
             </div>
             <h3 className="font-display italic font-medium text-[1.4rem] text-cream leading-[1.25]">
-              The only brand that honors all of them.
+              Committed to honoring all of them.
             </h3>
           </div>
         </div>

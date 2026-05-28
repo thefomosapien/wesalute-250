@@ -49,15 +49,15 @@ export function Collection() {
             The Collection
           </Eyebrow>
           <SectionTitle>
-            Built to be earned. <br className="hidden sm:block" />
-            <Italic color="#FFC43E">Made to be worn.</Italic>
+            Made with gratitude. <br className="hidden sm:block" />
+            <Italic color="#FFC43E">Worn with pride.</Italic>
           </SectionTitle>
           <p
             className="text-[1.05rem] leading-[1.6] text-cream max-w-[640px] mx-auto mt-6"
             style={{ opacity: 0.75 }}
           >
-            Three tiers. One campaign. Every piece anchored to A Real Thank
-            You® — and to a country built by people who served.
+            Merch that really means something. Every piece anchored to A Real Thank
+            You – and to a nation built by people who serve.
           </p>
         </div>
 

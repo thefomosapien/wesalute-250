@@ -29,17 +29,17 @@ export function Membership() {
               className="font-display font-bold leading-[1.05] tracking-[-0.025em] text-cream mt-5 mb-6"
               style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)" }}
             >
-              The brand says <br className="hidden sm:block" />
+              WeSalute says <br className="hidden sm:block" />
               thank you.{" "}
-              <Italic color="#FFC43E">The membership proves it.</Italic>
+              <Italic color="#FFC43E">The Membership proves it.</Italic>
             </h2>
             <p
               className="text-[1.08rem] leading-[1.65] text-cream mb-8"
               style={{ opacity: 0.82 }}
             >
-              For 27 years, WeSalute+ has delivered a real thank you in the
+              For 27 years, WeSalute+ has delivered A Real Thank You in the
               form of real savings — built with America&apos;s leading brands,
-              available every day, for every one of seven service communities.
+              available every day, for all those who serve.
             </p>
 
             <div className="grid gap-px bg-slateLine mb-8">
@@ -76,7 +76,7 @@ export function Membership() {
             }}
           >
             <div className="font-mono text-[11px] tracking-[0.32em] text-gold uppercase mb-5">
-              The Community
+              The WeSalute Community
             </div>
 
             <div

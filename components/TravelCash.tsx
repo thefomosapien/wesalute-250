@@ -56,11 +56,10 @@ export function TravelCash() {
               className="text-[1.15rem] leading-[1.6] text-cream mb-8"
               style={{ opacity: 0.85 }}
             >
-              A real thank you doesn&apos;t end at a tee. To mark 250 years,
-              every WeSalute member gets{" "}
-              <span className="underline-mint">$250 in Travel Cash</span> — on
-              top of the up-to-$3,000 in Travel Cash already included with
-              WeSalute Travel.
+              A Real Thank You doesn&apos;t end at merch. To mark 250 years,
+              every WeSalute Member gets{" "}
+              <span className="underline-mint">$250 in Travel Cash</span> –
+              a FREE gift only from WeSalute.
             </p>
 
             <ul className="list-none mb-9">

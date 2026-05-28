@@ -51,10 +51,8 @@ export function ThroughLine() {
               <span className="underline-mint">350 million Americans, 250 years.</span>
             </p>
             <p>
-              WeSalute is uniquely positioned to participate authentically. We
-              are the only brand that honors every form of American service
-              under one roof — and we&apos;ve been doing it for 27 of those 250
-              years.
+              No one else honors every form of American service under one roof
+              — and we&apos;ve been doing it for 27 of those 250 years.
             </p>
           </div>
         </div>

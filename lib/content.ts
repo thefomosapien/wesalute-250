@@ -80,7 +80,7 @@ export const timeline: TimelineEntry[] = [
     nationBody:
       "Pandemic. Wildfires. Hurricanes. School shootings. The country sees, in real time, that service is not one uniform — it's seven.",
     weSalute:
-      "WeSalute expands beyond military and veterans to honor all seven service communities: military and veterans, nurses, medical professionals, first responders, teachers, civil servants, and students.",
+      "WeSalute expands beyond military and veterans to honor every service community: military and veterans, nurses, medical professionals, first responders, teachers, civil servants, and students.",
   },
   {
     year: "2026",
@@ -164,6 +164,6 @@ export const merch250: SingleMerchItem = {
 export const merchMember: SingleMerchItem = {
   name: "WeSalute+ 250 Member Edition",
   type: "Members only",
-  desc: "Hard-enamel pin and embroidered patch set. Antique gold, heritage navy, cream. Numbered tin packaging. Reserved for verified WeSalute+ members. Not sold to non-members.",
+  desc: "Hard-enamel pin and embroidered patch set. Antique gold, heritage navy, cream. Numbered tin packaging. Reserved for verified WeSalute+ Members. Not sold to non-Members.",
   price: "$45",
 };
