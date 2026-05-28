@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
-import { Star } from "./Star";
 
 const benefits = [
   [
@@ -96,86 +96,16 @@ export function TravelCash() {
             </div>
           </div>
 
-          {/* Right — $250 hero card */}
-          <div
-            className="relative text-center overflow-hidden px-5 py-10 md:px-10 md:py-[60px]"
-            style={{
-              background: "#F4F0E6",
-              border: "1px solid rgba(181,21,45,0.33)",
-              boxShadow: "0 30px 60px rgba(0,0,0,0.3)",
-            }}
-          >
-            {/* Corner ornaments */}
-            {(
-              [
-                [0, 0],
-                [1, 0],
-                [0, 1],
-                [1, 1],
-              ] as [0 | 1, 0 | 1][]
-            ).map(([x, y], i) => (
-              <div
-                key={i}
-                className="absolute w-6 h-6"
-                style={{
-                  ...(x === 0 ? { left: "-1px" } : { right: "-1px" }),
-                  ...(y === 0 ? { top: "-1px" } : { bottom: "-1px" }),
-                  borderTop: y === 0 ? "2px solid #B5152D" : "none",
-                  borderBottom: y === 1 ? "2px solid #B5152D" : "none",
-                  borderLeft: x === 0 ? "2px solid #B5152D" : "none",
-                  borderRight: x === 1 ? "2px solid #B5152D" : "none",
-                }}
-              />
-            ))}
-
-            {/* "TRAVEL CASH" header row */}
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="inline-block w-7 h-0.5 bg-americaRed" />
-              <span className="font-mono text-[11px] tracking-[0.32em] text-americaNavy uppercase font-bold">
-                Travel Cash
-              </span>
-              <span className="inline-block w-7 h-0.5 bg-americaRed" />
-            </div>
-
-            <div className="font-display italic text-[1.6rem] text-americaRed font-semibold -mb-3">
-              $
-            </div>
-
-            {/* Big 250 */}
-            <div className="flex justify-center items-end leading-[0.85]">
-              {(
-                [
-                  ["2", "#1B2A4E"],
-                  ["5", "#B5152D"],
-                  ["0", "#1B2A4E"],
-                ] as [string, string][]
-              ).map(([digit, color]) => (
-                <span
-                  key={digit + color}
-                  className="font-display font-extrabold tracking-[-0.06em] travel-cash-numeral"
-                  style={{ color }}
-                >
-                  {digit}
-                </span>
-              ))}
-            </div>
-
-            <div className="font-condensed font-bold text-[1.4rem] text-americaNavy tracking-[0.04em] mt-2">
-              FREE · ON US
-            </div>
-
-            <div className="flex items-center justify-center gap-2 my-5">
-              <span className="inline-block w-5 h-[1.5px] bg-americaRed" />
-              <Star size={10} color="#1B2A4E" />
-              <span className="inline-block w-5 h-[1.5px] bg-americaRed" />
-            </div>
-
-            <p
-              className="font-display italic text-[1.05rem] text-americaNavy leading-[1.45]"
-              style={{ opacity: 0.85 }}
-            >
-              Because 250 years is worth more <br className="hidden sm:block" /> than a holiday sale.
-            </p>
+          {/* Right — $250 travel cash image */}
+          <div className="relative w-full" style={{ aspectRatio: "1 / 1", minHeight: "320px" }}>
+            <Image
+              src="/images/250-travel-cash.png"
+              alt="$250 in Free Travel Cash"
+              fill
+              style={{ objectFit: "contain", objectPosition: "center" }}
+              sizes="(max-width: 880px) 100vw, 50vw"
+              priority
+            />
           </div>
         </div>
       </div>
