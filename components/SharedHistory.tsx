@@ -1,9 +1,34 @@
+"use client";
+
+import { useState, useRef } from "react";
+import { Camera } from "lucide-react";
 import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
 import { Star } from "./Star";
-import { timeline } from "@/lib/content";
+import { ImageModal } from "./ImageModal";
+import { timeline, TimelineEntry } from "@/lib/content";
 
 export function SharedHistory() {
+  const [activePhoto, setActivePhoto] = useState<{
+    photo: NonNullable<TimelineEntry["photo"]>;
+    year: string;
+  } | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+
+  function openPhoto(
+    e: React.MouseEvent<HTMLButtonElement>,
+    photo: NonNullable<TimelineEntry["photo"]>,
+    year: string
+  ) {
+    triggerRef.current = e.currentTarget;
+    setActivePhoto({ photo, year });
+  }
+
+  function closeModal() {
+    setActivePhoto(null);
+    triggerRef.current?.focus();
+  }
+
   return (
     <section
       className="relative px-8 py-20 md:py-[140px] text-slate"
@@ -93,8 +118,12 @@ export function SharedHistory() {
                 <div className="timeline-side-right">
                   {row.weSalute ? (
                     <div
-                      className="bg-slate text-cream p-6 pr-7"
-                      style={{ borderLeft: "3px solid #FFC43E", boxShadow: "0 8px 24px rgba(0,0,0,0.12)" }}
+                      className="relative bg-slate text-cream p-6 pr-7"
+                      style={{
+                        borderLeft: "3px solid #FFC43E",
+                        boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                        paddingBottom: row.photo ? "48px" : undefined,
+                      }}
                     >
                       <div className="font-mono text-[11px] tracking-[0.28em] text-gold uppercase font-semibold mb-2.5 flex items-center gap-2">
                         <Star size={11} color="#FFC43E" />
@@ -103,11 +132,32 @@ export function SharedHistory() {
                       <p className="text-[0.95rem] leading-[1.6] text-cream" style={{ opacity: 0.95 }}>
                         {row.weSalute}
                       </p>
+                      {row.photo && (
+                        <button
+                          className="camera-btn absolute bottom-3 right-3 flex items-center justify-center rounded-full transition-colors duration-200"
+                          style={{
+                            width: "28px",
+                            height: "28px",
+                            background: "transparent",
+                            border: "1px solid rgba(255,196,62,0.4)",
+                            cursor: "pointer",
+                            color: "rgba(255,196,62,0.6)",
+                          }}
+                          aria-label={`View archival photo — ${row.year}`}
+                          onClick={(e) => openPhoto(e, row.photo!, row.year)}
+                        >
+                          <Camera size={14} />
+                        </button>
+                      )}
                     </div>
                   ) : (
                     <div
-                      className="bg-slate text-cream p-6 pr-7"
-                      style={{ borderLeft: "3px solid #FFC43E", boxShadow: "0 8px 24px rgba(0,0,0,0.12)" }}
+                      className="relative bg-slate text-cream p-6 pr-7"
+                      style={{
+                        borderLeft: "3px solid #FFC43E",
+                        boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                        paddingBottom: row.photo ? "48px" : undefined,
+                      }}
                     >
                       <div className="font-mono text-[11px] tracking-[0.28em] text-gold uppercase font-semibold mb-2.5 flex items-center gap-2">
                         <Star size={11} color="#FFC43E" />
@@ -119,6 +169,23 @@ export function SharedHistory() {
                         assembled the Lexington militia and gave the order on
                         that green in 1775.
                       </p>
+                      {row.photo && (
+                        <button
+                          className="camera-btn absolute bottom-3 right-3 flex items-center justify-center rounded-full transition-colors duration-200"
+                          style={{
+                            width: "28px",
+                            height: "28px",
+                            background: "transparent",
+                            border: "1px solid rgba(255,196,62,0.4)",
+                            cursor: "pointer",
+                            color: "rgba(255,196,62,0.6)",
+                          }}
+                          aria-label={`View archival photo — ${row.year}`}
+                          onClick={(e) => openPhoto(e, row.photo!, row.year)}
+                        >
+                          <Camera size={14} />
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
@@ -142,6 +209,16 @@ export function SharedHistory() {
           </div>
         </div>
       </div>
+
+      {/* Photo modal */}
+      {activePhoto && (
+        <ImageModal
+          photo={activePhoto.photo}
+          year={activePhoto.year}
+          isOpen={true}
+          onClose={closeModal}
+        />
+      )}
     </section>
   );
 }

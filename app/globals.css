@@ -41,6 +41,16 @@
   50%       { transform: scale(1.08); color: #FFC43E; }
 }
 
+@keyframes modal-backdrop-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes modal-panel-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ── Utility classes ───────────────────────────────────────────────── */
 @layer utilities {
   .reveal        { animation: float-in 1s ease-out backwards; }
@@ -114,6 +124,12 @@
   .cta-ghost:hover {
     border-color: #FFC43E;
     color: #FFC43E;
+  }
+
+  .camera-btn:hover {
+    background: rgba(255, 196, 62, 0.08) !important;
+    border-color: rgba(255, 196, 62, 1) !important;
+    color: #FFC43E !important;
   }
 }
 
