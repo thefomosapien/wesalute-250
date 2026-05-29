@@ -70,7 +70,7 @@ export function ImageModal({ photo, year, onClose, isOpen }: ImageModalProps) {
       <div
         className="relative w-full overflow-y-auto"
         style={{
-          maxWidth: "680px",
+          maxWidth: "560px",
           maxHeight: "90vh",
           background: "#001E33",
           border: "1px solid rgba(255,196,62,0.4)",
@@ -91,20 +91,20 @@ export function ImageModal({ photo, year, onClose, isOpen }: ImageModalProps) {
 
         {/* Image */}
         {!imgError ? (
-          <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+          <div className="relative w-full" style={{ aspectRatio: "1/1" }}>
             <Image
               src={photo.src}
               alt={photo.alt}
               fill
               style={{ objectFit: "cover" }}
-              sizes="680px"
+              sizes="560px"
               onError={() => setImgError(true)}
             />
           </div>
         ) : (
           <div
             className="w-full flex items-center justify-center"
-            style={{ aspectRatio: "16/9", background: "#000F1C" }}
+            style={{ aspectRatio: "1/1", background: "#000F1C" }}
           >
             <span
               className="font-display font-bold text-gold"
