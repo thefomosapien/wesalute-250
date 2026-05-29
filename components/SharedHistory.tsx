@@ -54,7 +54,7 @@ export function SharedHistory() {
             className="font-display font-bold leading-[1.05] tracking-[-0.025em] text-slate mt-4 mb-5"
             style={{ fontSize: "clamp(2.6rem, 5vw, 4.2rem)" }}
           >
-            America&apos;s story. <Italic color="#8E1023">WeSalute&apos;s</Italic> place in it.
+            WeSalute has a special place in <Italic color="#8E1023">America&apos;s story.</Italic>
           </h2>
           <p
             className="text-[1.05rem] leading-[1.65] text-slate max-w-[640px] mx-auto"
