@@ -9,6 +9,7 @@ import { Membership } from "@/components/Membership";
 import { Collection } from "@/components/Collection";
 import { FinalSalute } from "@/components/FinalSalute";
 import { Footer } from "@/components/Footer";
+import { MobileCTABar } from "@/components/MobileCTABar";
 
 export default function HomePage() {
   return (
@@ -23,7 +24,10 @@ export default function HomePage() {
       <Membership />
       <Collection />
       <FinalSalute />
+      {/* Spacer so sticky bar doesn't cover footer on mobile */}
+      <div className="md:hidden h-16" />
       <Footer />
+      <MobileCTABar />
     </div>
   );
 }

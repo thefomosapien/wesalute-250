@@ -194,6 +194,34 @@ export function SharedHistory() {
           })}
         </div>
 
+        {/* Mobile CTA interstitial — appears after the history section lands */}
+        <div
+          className="md:hidden mt-2 mb-12 px-1 py-8 flex flex-col items-center gap-4 text-center"
+          style={{ borderTop: "1px solid rgba(0,30,51,0.15)" }}
+        >
+          <p
+            className="font-display italic text-slate text-[1.05rem] leading-[1.45] max-w-[320px]"
+            style={{ opacity: 0.7 }}
+          >
+            27 years of A Real Thank You. Shop the collection that marks the moment.
+          </p>
+          <div className="flex flex-col w-full gap-2">
+            <button
+              className="cta cta-gold w-full justify-center"
+              style={{ padding: "14px 20px", fontSize: "13px" }}
+            >
+              Shop The 250 Collection
+              <span className="font-display text-[15px]">→</span>
+            </button>
+            <button
+              className="font-condensed font-bold text-[12px] tracking-[0.2em] uppercase text-americaRedDeep"
+              style={{ background: "none", border: "none", cursor: "pointer", padding: "8px" }}
+            >
+              Claim $250 in Free Travel Cash →
+            </button>
+          </div>
+        </div>
+
         {/* Closing quote */}
         <div
           className="mt-10 px-5 py-6 md:px-10 md:py-8 bg-slate text-cream text-center"
