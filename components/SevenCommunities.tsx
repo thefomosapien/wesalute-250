@@ -6,7 +6,7 @@ import { Star } from "./Star";
 import { communities } from "@/lib/content";
 
 const servicePhotos = [
-  { src: "/images/military-3.png", label: "Military & Veterans" },
+  { src: "/images/military-4.png", label: "Military & Veterans" },
   { src: "/images/medical-2.png", label: "Nurses & Medical Professionals" },
   { src: "/images/teacher-student-2.png", label: "Teachers" },
 ] as const;

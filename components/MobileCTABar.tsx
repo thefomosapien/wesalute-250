@@ -28,19 +28,6 @@ export function MobileCTABar() {
           Claim $250 Travel Cash
         </button>
 
-        {/* Secondary */}
-        <button
-          className="flex-1 font-condensed font-bold text-[13px] tracking-[0.18em] uppercase text-cream flex items-center justify-center transition-colors"
-          style={{
-            height: "44px",
-            background: "transparent",
-            border: "1px solid rgba(244,240,230,0.27)",
-            cursor: "pointer",
-          }}
-        >
-          Join WeSalute+
-        </button>
-
         {/* Dismiss */}
         <button
           onClick={() => setDismissed(true)}
