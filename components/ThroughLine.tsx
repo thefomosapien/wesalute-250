@@ -4,46 +4,32 @@ import { SectionTitle, Italic } from "./SectionTitle";
 
 const featuredProducts = [
   {
-    name: "Premium Hoodie",
-    handle: "unisex-hoodie",
-    price: "45.50",
+    name: "1776 / 2026 Tee",
+    handle: "america-250-1776-2026-tee",
+    price: "30.00",
     image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-premium-hoodie-black-front-67191f57b5a5e.jpg?v=1729699685",
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-white-front-6a1e1eec00a21.jpg?v=1780358905",
   },
   {
-    name: "Heavyweight Tee — White",
-    handle: "men-s-premium-heavyweight-tee",
-    price: "23.00",
+    name: "Liberty Bell Tee",
+    handle: "america-250-liberty-bell-tee",
+    price: "30.00",
     image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/mens-premium-heavyweight-tee-white-front-67192389de03a.jpg?v=1729700755",
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-white-front-6a1e552a7a518.jpg?v=1780372794",
   },
   {
-    name: "Service Saluted Circle Tee",
-    handle: "unisex-garment-dyed-heavyweight-t-shirt-1",
-    price: "24.50",
+    name: "Corduroy Ballcap",
+    handle: "vintage-corduroy-cap",
+    price: "28.00",
     image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-black-front-67215b47b7cb4.jpg?v=1730239317",
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/vintage-corduroy-cap-navy-front-6a1e6492ec22f.jpg?v=1780376739",
   },
   {
-    name: "Packable Jacket",
-    handle: "embroidered-champion-packable-jacket",
-    price: "55.00",
+    name: "American Since 1776 Snapback",
+    handle: "5-panel-cap",
+    price: "22.00",
     image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/embroidered-champion-packable-jacket-black-front-6719311f35f9b.jpg?v=1729704237",
-  },
-  {
-    name: "Camo Trucker Hat",
-    handle: "camouflage-trucker-hat",
-    price: "23.50",
-    image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/camouflage-trucker-hat-camo-black-front-67192fe6cb994.jpg?v=1729703921",
-  },
-  {
-    name: "WeSalute Mug",
-    handle: "black-glossy-mug",
-    price: "16.00",
-    image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/black-glossy-mug-black-11-oz-handle-on-right-67192e81ae8b2.jpg?v=1729703562",
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/5-panel-mid-profile-baseball-cap-royal-natural-front-6a2064d21da6c.jpg?v=1780507870",
   },
 ] as const;
 
@@ -112,10 +98,10 @@ export function ThroughLine() {
           <div className="flex items-end justify-between mb-8">
             <div>
               <div className="font-mono text-[10px] tracking-[0.32em] text-gold uppercase mb-2">
-                WeSalute Store
+                WeSalute × America 250 Merch
               </div>
               <p className="font-display italic text-cream text-[1.25rem] leading-[1.2]">
-                Wear the thank you.
+                Limited merch collection to mark the event.
               </p>
             </div>
             <button
@@ -132,7 +118,7 @@ export function ThroughLine() {
           </div>
 
           {/* Product grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {featuredProducts.map((product) => (
               <div key={product.handle} className="group cursor-pointer">
                 {/* Image */}
@@ -145,7 +131,7 @@ export function ThroughLine() {
                     alt={product.name}
                     fill
                     style={{ objectFit: "cover", transition: "transform 0.5s ease" }}
-                    sizes="(max-width: 640px) 50vw, (max-width: 920px) 33vw, 300px"
+                    sizes="(max-width: 640px) 50vw, (max-width: 920px) 25vw, 220px"
                     className="group-hover:scale-105"
                   />
                   {/* Hover overlay */}
