@@ -77,14 +77,13 @@ export function ThroughLine() {
 
           <div className="text-cream text-[1.05rem] leading-[1.75]" style={{ opacity: 0.82 }}>
             <p className="mb-5">
-              The American 250 is a once-in-a-generation moment. It&apos;s
-              bipartisan — Bush and Obama as honorary co-chairs of the official
-              America250 initiative — and built on a simple idea:{" "}
-              <span className="underline-mint">350 million Americans, 250 years.</span>
+              The Semiquincentennial is a once-in-a-generation moment and it
+              belongs to the people who made it possible. Not all Americans are
+              called to serve. Those who are have carried this country for 250 years.
             </p>
             <p>
-              No one else honors every form of American service under one roof
-              — and we&apos;ve been doing it for 27 of those 250 years.
+              WeSalute honors every form of American service under one roof
+              and we&apos;ve been doing it for 27 of those 250 years.
             </p>
           </div>
         </div>
