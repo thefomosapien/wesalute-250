@@ -122,7 +122,7 @@ export const timeline: TimelineEntry[] = [
     nationBody:
       "Pandemic. Wildfires. Hurricanes. School shootings. The country sees, in real time, that service is not one uniform — it's seven.",
     weSalute:
-      "WeSalute expands beyond military and veterans to honor every service community: military and veterans, nurses, medical professionals, first responders, teachers, civil servants, and students.",
+      "WeSalute expands beyond military and veterans to honor everyone it serves: military and veterans, nurses, medical professionals, first responders, teachers, civil servants, and students.",
   },
   {
     year: "2026",
@@ -130,7 +130,7 @@ export const timeline: TimelineEntry[] = [
     nationBody:
       "The Semiquincentennial. A bipartisan effort — Bush and Obama as honorary co-chairs — to engage all 350 million Americans in the meaning of 250 years.",
     weSalute:
-      "WeSalute marks the moment the only way we know how: by honoring everyone whose service made it possible. Six weeks. One collection. 250 numbered shirts. One real thank you.",
+      "WeSalute marks the moment by honoring everyone whose service made it possible.",
   },
 ];
 
@@ -162,12 +162,12 @@ export const communities: Community[] = [
   },
   {
     name: "Civil Servants",
-    desc: "Federal, state, local, USPS, public works. The quiet work.",
+    desc: "Federal, state, local, USPS, public works. Behind the scenes of every neighborhood.",
     since: "Every day",
   },
   {
     name: "Students",
-    desc: "JROTC, ROTC, military families. The next generation, already serving.",
+    desc: "The next generation, already serving.",
     since: "The next 250",
   },
 ];

@@ -1,6 +1,5 @@
 import { StarField } from "./StarField";
 import { Eyebrow } from "./Eyebrow";
-import { Italic } from "./SectionTitle";
 
 export function FinalSalute() {
   return (
@@ -14,24 +13,23 @@ export function FinalSalute() {
 
       <div className="max-w-[780px] mx-auto text-center relative">
         <Eyebrow color="#FFC43E" className="justify-center">
-          The Final Salute · November 11, 2026
+          Celebrate with us
         </Eyebrow>
 
         <h2
           className="font-display font-bold leading-[1.05] tracking-[-0.025em] text-cream mt-5 mb-6"
           style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)" }}
         >
-          The country turns 250 in July. <br className="hidden sm:block" />
-          <Italic color="#FFC43E">We close the chapter on Veterans Day.</Italic>
+          WeSalute is celebrating America 250 all year long. But the limited edition merch may not last!
         </h2>
 
         <p
           className="text-[1.1rem] leading-[1.65] text-cream max-w-[620px] mx-auto mb-10"
           style={{ opacity: 0.82 }}
         >
-          The campaign begins in June. It peaks on the Fourth. It closes with a
-          Final 250 restock on November 11 — where it should close. That&apos;s
-          the through-line. That&apos;s the year. That&apos;s the thank you.
+          We will continue to release new merch, deals, and offers throughout
+          the year. Some merch will be limited to 250 products sold to
+          commemorate the event. Don&apos;t miss out!
         </p>
 
         <div className="flex gap-4 justify-center flex-wrap mb-[60px]">
@@ -52,10 +50,10 @@ export function FinalSalute() {
           }}
         >
           <div className="font-mono text-[11px] tracking-[0.32em] text-gold uppercase mb-3">
-            Early access
+            DON&apos;T MISS OUT
           </div>
           <p className="font-display font-medium text-[1.2rem] text-cream mb-5 leading-[1.3]">
-            Get notified when the 250 collection drops. Members get the first 48 hours.
+            Get notified when we drop new merch and deals.
           </p>
           <div className="flex flex-col sm:flex-row gap-2">
             <input

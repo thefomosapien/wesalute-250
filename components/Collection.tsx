@@ -56,8 +56,7 @@ export function Collection() {
             className="text-[1.05rem] leading-[1.6] text-cream max-w-[640px] mx-auto mt-6"
             style={{ opacity: 0.75 }}
           >
-            Merch that really means something. Every piece anchored to A Real Thank
-            You – and to a nation built by people who serve.
+            Merch that really means something. Every piece anchored to a nation built by people who serve.
           </p>
         </div>
 

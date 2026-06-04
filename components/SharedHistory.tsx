@@ -60,10 +60,7 @@ export function SharedHistory() {
             className="text-[1.05rem] leading-[1.65] text-slate max-w-[640px] mx-auto"
             style={{ opacity: 0.7 }}
           >
-            The right side of every row is where WeSalute showed up. Some of
-            those moments start in 1775 — when a man named Capt. John Parker
-            took a stand at Lexington. His direct descendant founded this
-            company.
+            See how the nation&apos;s timeline aligns with WeSalute.
           </p>
         </div>
 

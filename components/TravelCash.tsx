@@ -56,10 +56,9 @@ export function TravelCash() {
               className="text-[1.15rem] leading-[1.6] text-cream mb-8"
               style={{ opacity: 0.85 }}
             >
-              A Real Thank You doesn&apos;t end at merch. To mark 250 years,
-              every WeSalute Member gets{" "}
-              <span className="underline-mint">$250 in Travel Cash</span> –
-              a FREE gift only from WeSalute.
+              To mark 250 years, every WeSalute Member gets{" "}
+              <span className="underline-mint">$250 in Travel Cash</span> —
+              on top of the Travel Cash already included with WeSalute Travel.
             </p>
 
             <ul className="list-none mb-9">
@@ -91,7 +90,7 @@ export function TravelCash() {
               <span className="font-display text-[16px]">→</span>
             </button>
             <div className="mt-3 font-mono text-[10px] tracking-[0.24em] text-cream uppercase" style={{ opacity: 0.4 }}>
-              Terms apply. Available through Nov 11, 2026.
+              Terms apply. Travel Cash can be redeemed as Savings Credits on the WeSalute Travel platform.
             </div>
           </div>
 

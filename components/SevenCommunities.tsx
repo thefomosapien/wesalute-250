@@ -23,14 +23,13 @@ export function SevenCommunities() {
         <div className="mb-[72px]">
           <Eyebrow color="#FFC43E">Service Through The Centuries</Eyebrow>
           <SectionTitle>
-            Seven communities. <br className="hidden sm:block" />
-            One country.{" "}
+            Service unites us all.{" "}
             <Italic color="#FFC43E">250 years of showing up.</Italic>
           </SectionTitle>
           <p className="text-[1.1rem] leading-[1.65] text-cream mt-7 max-w-[640px]" style={{ opacity: 0.78 }}>
-            Service has never been a single uniform. The first 250 years were
-            built by people who served in seven different ways. This collection
-            honors them all.
+            Service is represented in many different uniforms. WeSalute honors
+            them all with limited edition merch collections to show your pride
+            and a FREE gift of $250 in WeSalute Travel Cash.
           </p>
         </div>
 
@@ -124,7 +123,7 @@ export function SevenCommunities() {
               ALL UNDER ONE BANNER
             </div>
             <h3 className="font-display italic font-medium text-[1.4rem] text-cream leading-[1.25]">
-              Committed to honoring all of them.
+              The only one honoring all of them.
             </h3>
           </div>
         </div>

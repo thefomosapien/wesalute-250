@@ -3,10 +3,10 @@ import { Italic } from "./SectionTitle";
 import { Star } from "./Star";
 
 const memberBenefits = [
-  ["10% off", "the WeSalute merch store. Every order. No minimum."],
-  ["Up to $3,000 Travel Cash", "on hotels, cruises, and car rentals — yours, included."],
-  ["48-hour early access", "to the 250 Collection and every drop after it."],
-  ["WeSalute+ 250 Member Edition", "pin and patch set — not sold to non-members."],
+  ["Early Access & Exclusive Merch", "You'll be the first to know!"],
+  ["$3,000 in Travel Cash EVERY YEAR", "Book hotels, cruises, car rentals and more — yours, included."],
+  ["WeSalute+ ID Card", "Get access to your savings & benefits everywhere you go!"],
+  ["Over a Thousand Offers & Benefits", "Exclusive to WeSalute+ Members, save every single day."],
 ] as const;
 
 export function Membership() {
@@ -37,9 +37,9 @@ export function Membership() {
               className="text-[1.08rem] leading-[1.65] text-cream mb-8"
               style={{ opacity: 0.82 }}
             >
-              For 27 years, WeSalute+ has delivered A Real Thank You in the
-              form of real savings — built with America&apos;s leading brands,
-              available every day, for all those who serve.
+              WeSalute+ delivers A Real Thank You&reg; in the form of real
+              savings &amp; benefits — built with America&apos;s leading brands,
+              available every day, for all who serve.
             </p>
 
             <div className="grid gap-px bg-slateLine mb-8">
