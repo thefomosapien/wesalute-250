@@ -148,7 +148,7 @@ export function Hero() {
 
       {/* Scroll cue */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 font-mono text-[10px] tracking-[0.32em] text-cream uppercase opacity-60">
-        <span>The Story Below</span>
+        <span>The Story Continues</span>
         <span className="text-[18px]">↓</span>
       </div>
     </section>

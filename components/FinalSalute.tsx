@@ -34,10 +34,10 @@ export function FinalSalute() {
 
         <div className="flex gap-4 justify-center flex-wrap mb-[60px]">
           <button className="cta cta-gold">
-            Shop The Collection
+            JOIN WESALUTE
             <span className="font-display text-[16px]">→</span>
           </button>
-          <button className="cta cta-ghost">Join WeSalute+</button>
+          <button className="cta cta-ghost">SHOP THE COLLECTION</button>
         </div>
 
         {/* Email capture */}

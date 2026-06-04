@@ -38,7 +38,7 @@ function CornerOrnaments({ color = "#FFC43E", size = 16 }: { color?: string; siz
 export function Collection() {
   return (
     <section
-      id="collection"
+      id="limited-merch"
       className="px-8 pt-20 md:pt-[140px] pb-20 bg-slate"
       style={{ borderTop: "1px solid #163756" }}
     >
