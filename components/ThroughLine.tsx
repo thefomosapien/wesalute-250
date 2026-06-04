@@ -1,5 +1,51 @@
+import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { SectionTitle, Italic } from "./SectionTitle";
+
+const featuredProducts = [
+  {
+    name: "Premium Hoodie",
+    handle: "unisex-hoodie",
+    price: "45.50",
+    image:
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-premium-hoodie-black-front-67191f57b5a5e.jpg?v=1729699685",
+  },
+  {
+    name: "Heavyweight Tee — White",
+    handle: "men-s-premium-heavyweight-tee",
+    price: "23.00",
+    image:
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/mens-premium-heavyweight-tee-white-front-67192389de03a.jpg?v=1729700755",
+  },
+  {
+    name: "Service Saluted Circle Tee",
+    handle: "unisex-garment-dyed-heavyweight-t-shirt-1",
+    price: "24.50",
+    image:
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-black-front-67215b47b7cb4.jpg?v=1730239317",
+  },
+  {
+    name: "Packable Jacket",
+    handle: "embroidered-champion-packable-jacket",
+    price: "55.00",
+    image:
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/embroidered-champion-packable-jacket-black-front-6719311f35f9b.jpg?v=1729704237",
+  },
+  {
+    name: "Camo Trucker Hat",
+    handle: "camouflage-trucker-hat",
+    price: "23.50",
+    image:
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/camouflage-trucker-hat-camo-black-front-67192fe6cb994.jpg?v=1729703921",
+  },
+  {
+    name: "WeSalute Mug",
+    handle: "black-glossy-mug",
+    price: "16.00",
+    image:
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/black-glossy-mug-black-11-oz-handle-on-right-67192e81ae8b2.jpg?v=1729703562",
+  },
+] as const;
 
 export function ThroughLine() {
   return (
@@ -54,6 +100,82 @@ export function ThroughLine() {
               No one else honors every form of American service under one roof
               — and we&apos;ve been doing it for 27 of those 250 years.
             </p>
+          </div>
+        </div>
+
+        {/* ─── Shop Strip ──────────────────────────────────────────── */}
+        <div
+          className="mt-16 pt-12"
+          style={{ borderTop: "1px solid #163756" }}
+        >
+          {/* Strip header */}
+          <div className="flex items-end justify-between mb-8">
+            <div>
+              <div className="font-mono text-[10px] tracking-[0.32em] text-gold uppercase mb-2">
+                WeSalute Store
+              </div>
+              <p className="font-display italic text-cream text-[1.25rem] leading-[1.2]">
+                Wear the thank you.
+              </p>
+            </div>
+            <button
+              className="font-condensed font-bold text-[12px] tracking-[0.2em] uppercase text-gold shrink-0 ml-6"
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(255,196,62,0.35)",
+                cursor: "pointer",
+                padding: "10px 20px",
+              }}
+            >
+              Shop All →
+            </button>
+          </div>
+
+          {/* Product grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {featuredProducts.map((product) => (
+              <div key={product.handle} className="group cursor-pointer">
+                {/* Image */}
+                <div
+                  className="relative w-full overflow-hidden"
+                  style={{ aspectRatio: "1/1", background: "#000F1C" }}
+                >
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    style={{ objectFit: "cover", transition: "transform 0.5s ease" }}
+                    sizes="(max-width: 640px) 50vw, (max-width: 920px) 33vw, 300px"
+                    className="group-hover:scale-105"
+                  />
+                  {/* Hover overlay */}
+                  <div
+                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    style={{ background: "rgba(0,15,28,0.65)" }}
+                  >
+                    <span
+                      className="font-condensed font-bold text-[11px] tracking-[0.24em] uppercase text-gold px-4 py-2"
+                      style={{ border: "1px solid rgba(255,196,62,0.7)" }}
+                    >
+                      Shop →
+                    </span>
+                  </div>
+                </div>
+
+                {/* Info */}
+                <div className="pt-3">
+                  <div
+                    className="font-condensed font-bold text-cream leading-tight tracking-[0.01em]"
+                    style={{ fontSize: "0.88rem" }}
+                  >
+                    {product.name}
+                  </div>
+                  <div className="font-mono text-gold mt-1.5" style={{ fontSize: "10px" }}>
+                    From ${product.price}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

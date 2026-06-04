@@ -34,6 +34,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000"
+  ),
   title: "WeSalute × America 250",
   description: "Celebrating 250 years of American service and sacrifice.",
 };
