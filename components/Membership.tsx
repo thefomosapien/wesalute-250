@@ -34,13 +34,6 @@ const testimonials = [
     name: "Charles F. Harris",
     since: "WeSalute Member since 2019",
   },
-  {
-    paragraphs: [
-      "I have been a member of WeSalute+ for many years. Today, when saving my money is crucial, I am very happy with my choice to enroll. Great discounts on just about everything.",
-    ],
-    name: "Frank Gasiorowski",
-    since: "WeSalute Member since 2024",
-  },
 ];
 
 export function Membership() {

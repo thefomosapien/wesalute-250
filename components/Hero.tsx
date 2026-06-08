@@ -52,7 +52,7 @@ export function Hero() {
             250 Years of{" "}
             <span style={{ color: "#FFC43E" }}>Service.</span>
             <br className="hidden sm:block" />
-            WeSalute <Italic color="#FFC43E">You.</Italic>
+            <Italic color="#FFC43E">One Real Thank You.</Italic>
           </h1>
 
           <p
