@@ -18,9 +18,9 @@ export function FinalSalute() {
 
         <h2
           className="font-display font-bold leading-[1.05] tracking-[-0.025em] text-cream mt-5 mb-6"
-          style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)" }}
+          style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)" }}
         >
-          WeSalute is celebrating America 250 all year long. But the limited edition merch may not last!
+          WeSalute is celebrating America 250 all year long but the limited edition merch will not last!
         </h2>
 
         <p

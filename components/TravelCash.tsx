@@ -5,7 +5,7 @@ import { Italic } from "./SectionTitle";
 const benefits = [
   [
     "Open to everyone",
-    "Members and new sign-ups alike. Service-verified for full WeSalute+ access.",
+    "Members and new sign-ups alike. Service-verified for full WeSalute access.",
   ],
   [
     "1M+ hotels",
@@ -49,16 +49,16 @@ export function TravelCash() {
               className="font-display font-bold leading-[1.0] tracking-[-0.03em] text-cream mt-5 mb-6"
               style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}
             >
-              $250 in <Italic color="#FFC43E">FREE</Italic> <br className="hidden sm:block" />
-              Travel Cash.
+              $250 <Italic color="#FFC43E">FREE</Italic>{" "}
+              <br className="hidden sm:block" />
+              Travel Cash Gift.
             </h2>
             <p
               className="text-[1.15rem] leading-[1.6] text-cream mb-8"
               style={{ opacity: 0.85 }}
             >
               To mark 250 years, every WeSalute Member gets{" "}
-              <span className="underline-mint">$250 in Travel Cash</span> —
-              on top of the Travel Cash already included with WeSalute Travel.
+              <span className="underline-mint">$250 in Travel Cash</span>.
             </p>
 
             <ul className="list-none mb-9">

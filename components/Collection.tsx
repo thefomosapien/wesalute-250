@@ -1,37 +1,90 @@
 import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { SectionTitle, Italic } from "./SectionTitle";
-import { Star } from "./Star";
 
 const collections = [
   {
     title: "WeSalute 250 — Limited Edition",
     handle: "wesalute-250-limited-edition",
     desc: "Designs honoring every community that has answered the call — military, veterans, first responders, nurses, educators, and civil servants. Each design limited to 250 orders.",
-    image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/vintage-corduroy-cap-navy-front-6a220a204e463.jpg?v=1780615722",
     tag: "Limited Edition",
     tagColor: "#FFC43E",
+    products: [
+      {
+        title: "America 250 — Corduroy Ballcap",
+        handle: "america-250-corduroy-ballcap",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/vintage-corduroy-cap-navy-front-6a220a204e463.jpg?v=1780615722",
+      },
+      {
+        title: "Block Party Bundle",
+        handle: "block-party-bundle",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/block_party.png?v=1780954275",
+      },
+      {
+        title: "America 250 — Eagle 250 Playing Cards",
+        handle: "america-250-eagle-250-playing-cards",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/poker-playing-cards-white-2.5x3.5-front-6a226ca99a27b.jpg?v=1780640954",
+      },
+      {
+        title: "America 250 — Insulated Tumbler with Straw",
+        handle: "america-250-insulated-tumbler-with-straw",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/insulated-tumbler-with-a-straw-navy-20-oz-front-6a2264b62722d.jpg?v=1780638913",
+      },
+    ],
   },
   {
     title: "America 250 — WeSalute+ Exclusive Merch",
     handle: "wesalute-250-member-edition",
     desc: "Exclusive merch for WeSalute+ Members — not available anywhere else in the WeSalute 250 collection. Our way of recognizing the people who made this community what it is.",
-    image: null,
     tag: "Members Only",
     tagColor: "#B5DFD0",
+    products: [
+      {
+        title: "Medical Professional — Service Through Centuries Tee",
+        handle: "medical-professional-service-through-centuries-tee",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-ivory-front-6a272f50c36fd.jpg?v=1780952950",
+      },
+      {
+        title: "First Responder — Service Through Centuries Tee",
+        handle: "first-responder-service-through-centuries-tee",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-white-left-front-6a22685ca940c.jpg?v=1780639860",
+      },
+      {
+        title: "Nurse — Service Through Centuries Tee",
+        handle: "nurse-service-through-centuries-tee",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-white-left-front-6a22661d6b32c.jpg?v=1780639280",
+      },
+      {
+        title: "America 250 — Eagle Ringer Tee",
+        handle: "america-250-eagle-ringer-tee",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-ringer-t-shirt-natural-midnight-navy-left-front-6a272c2150960.png?v=1780952969",
+      },
+    ],
   },
   {
     title: "Gifts & Bundles",
     handle: "gifts-bundles",
     desc: "Curated gift sets for the moments that matter — military retirements, Nurses Week, Veterans Day, and every occasion when someone just deserves to be acknowledged.",
-    image: null,
     tag: "Gift Sets",
     tagColor: "#FFC43E",
+    products: [
+      {
+        title: "Block Party Bundle",
+        handle: "block-party-bundle",
+        image:
+          "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/block_party.png?v=1780954275",
+      },
+    ],
   },
-] as const;
-
-const STARS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+];
 
 export function Collection() {
   return (
@@ -68,75 +121,45 @@ export function Collection() {
             >
               {/* Visual area */}
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
-                {col.image ? (
-                  <>
-                    <Image
-                      src={col.image}
-                      alt={col.title}
-                      fill
-                      style={{
-                        objectFit: "cover",
-                        objectPosition: "center",
-                        transition: "transform 0.5s ease",
-                      }}
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="group-hover:scale-105"
-                    />
-                    <div
-                      className="absolute inset-0 pointer-events-none"
-                      style={{
-                        background:
-                          "linear-gradient(to top, rgba(0,15,28,0.65) 0%, transparent 55%)",
-                      }}
-                    />
-                  </>
-                ) : col.tag === "Members Only" ? (
+                {col.products.length >= 4 ? (
                   <div
-                    className="absolute inset-0 flex flex-col items-center justify-center gap-4"
-                    style={{
-                      background:
-                        "radial-gradient(ellipse at 40% 40%, #0B2842 0%, #000F1C 100%)",
-                    }}
+                    className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-px"
+                    style={{ background: "#163756" }}
                   >
-                    <div
-                      className="w-24 h-24 rounded-full flex flex-col items-center justify-center font-display font-bold"
-                      style={{
-                        background:
-                          "radial-gradient(circle at 30% 30%, #F5D98A, #C9922A)",
-                        color: "#001E33",
-                        boxShadow: "0 16px 40px rgba(0,0,0,0.5)",
-                      }}
-                    >
-                      <div style={{ fontSize: "0.6rem", letterSpacing: "0.14em", opacity: 0.7 }}>
-                        WESALUTE+
+                    {col.products.slice(0, 4).map((p) => (
+                      <div key={p.handle} className="relative overflow-hidden">
+                        <Image
+                          src={p.image}
+                          alt={p.title}
+                          fill
+                          style={{ objectFit: "cover" }}
+                          sizes="(max-width: 768px) 50vw, 18vw"
+                        />
                       </div>
-                      <div style={{ fontSize: "1.6rem", lineHeight: 1 }}>250</div>
-                      <div style={{ fontSize: "0.5rem", letterSpacing: "0.18em", opacity: 0.7 }}>
-                        1776 · 2026
-                      </div>
-                    </div>
-                    <div className="font-mono text-[10px] tracking-[0.28em] text-gold uppercase" style={{ opacity: 0.55 }}>
-                      WeSalute+ Verified Only
-                    </div>
+                    ))}
                   </div>
                 ) : (
-                  <div
-                    className="absolute inset-0 flex flex-col items-center justify-center gap-4"
+                  <Image
+                    src={col.products[0].image}
+                    alt={col.products[0].title}
+                    fill
                     style={{
-                      background:
-                        "radial-gradient(ellipse at 60% 40%, #0B2842 0%, #000F1C 100%)",
+                      objectFit: "cover",
+                      transition: "transform 0.5s ease",
                     }}
-                  >
-                    <div className="grid grid-cols-3 gap-3" style={{ opacity: 0.35 }}>
-                      {STARS.map((i) => (
-                        <Star key={i} size={16} color="#FFC43E" />
-                      ))}
-                    </div>
-                    <div className="font-display italic text-cream text-[1.15rem] text-center px-6 leading-[1.3]" style={{ opacity: 0.55 }}>
-                      For every moment<br />worth marking.
-                    </div>
-                  </div>
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="group-hover:scale-105"
+                  />
                 )}
+
+                {/* Gradient overlay */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(0,15,28,0.6) 0%, transparent 50%)",
+                  }}
+                />
 
                 {/* Tag badge */}
                 <div
