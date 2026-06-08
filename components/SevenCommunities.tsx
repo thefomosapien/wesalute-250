@@ -88,7 +88,7 @@ export function SevenCommunities() {
           {communities.map((comm, i) => (
             <div
               key={comm.name}
-              className="hover-lift relative min-h-[220px] p-9 px-8"
+              className="hover-lift relative min-h-[160px] md:min-h-[220px] p-6 md:p-9 px-6 md:px-8"
               style={{
                 borderRight: i < communities.length - 1 ? "1px solid #163756" : "none",
                 borderBottom: "1px solid #163756",
@@ -113,7 +113,7 @@ export function SevenCommunities() {
 
           {/* 8th cell — closing statement */}
           <div
-            className="min-h-[220px] p-9 px-8 flex flex-col justify-center items-start"
+            className="min-h-[160px] md:min-h-[220px] p-6 md:p-9 px-6 md:px-8 flex flex-col justify-center items-start"
             style={{
               background: "linear-gradient(135deg, rgba(255,196,62,0.13) 0%, rgba(255,196,62,0.03) 100%)",
               borderBottom: "1px solid #163756",

@@ -139,14 +139,14 @@
   .stats-grid             { grid-template-columns: repeat(2, 1fr) !important; }
   .travel-cash-numeral    { font-size: clamp(4rem, 20vw, 6rem) !important; }
   .cta                    { letter-spacing: 0.14em; padding: 16px 24px; }
-  .photo-editorial-grid   { grid-template-columns: 1fr !important; grid-template-rows: 240px 200px 200px !important; }
+  .photo-editorial-grid   { grid-template-columns: 1fr !important; grid-template-rows: 200px 160px 160px !important; }
   .photo-editorial-left   { grid-row: span 1 !important; }
 }
 
 @media (max-width: 880px) {
-  .timeline-row    { grid-template-columns: 1fr !important; }
+  .timeline-row    { grid-template-columns: 1fr !important; gap: 16px !important; }
   .timeline-side-right { order: 2; }
-  .timeline-side-left  { order: 1; }
+  .timeline-side-left  { order: 1; text-align: left !important; padding-right: 0 !important; }
   .hero-grid       { grid-template-columns: 1fr !important; gap: 32px !important; }
   .merch-grid-3    { grid-template-columns: 1fr !important; }
   .seven-grid      { grid-template-columns: 1fr !important; }
