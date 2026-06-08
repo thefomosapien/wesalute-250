@@ -12,9 +12,35 @@ const memberBenefits = [
 ] as const;
 
 const testimonials = [
-  { quote: "Your testimonial will appear here.", attr: "WeSalute+ Member" },
-  { quote: "Your testimonial will appear here.", attr: "WeSalute+ Member" },
-  { quote: "Your testimonial will appear here.", attr: "WeSalute+ Member" },
+  {
+    paragraphs: [
+      "In less than six months, my family has saved over $1,100 through WeSalute+! We saved several hundred dollars with JetBlue alone.",
+      "Between the 5% off and free checked bags, we are now pretty devoted to using our WeSalute+ membership to fly JetBlue wherever we go.",
+    ],
+    name: "Amber Cooper",
+    since: "WeSalute+ Member since 2022",
+  },
+  {
+    paragraphs: [
+      "I joined WeSalute+ in 2016. I looked at the WeSalute website and saw all of the retail and travel partners, I immediately enrolled in the annual plan. I've enjoyed tracking all my savings with the WeSalute+ ID Card. In just a few transactions, my card has paid for itself!",
+    ],
+    name: "Holly Landau",
+    since: "WeSalute+ Member since 2016",
+  },
+  {
+    paragraphs: [
+      "Thank you very much. WeSalute+ has been extremely rewarding to me. I am very elated to be a member. The services and benefits are spectacular.",
+    ],
+    name: "Charles F. Harris",
+    since: "WeSalute Member since 2019",
+  },
+  {
+    paragraphs: [
+      "I have been a member of WeSalute+ for many years. Today, when saving my money is crucial, I am very happy with my choice to enroll. Great discounts on just about everything.",
+    ],
+    name: "Frank Gasiorowski",
+    since: "WeSalute Member since 2024",
+  },
 ];
 
 export function Membership() {
@@ -107,17 +133,28 @@ export function Membership() {
                       <Star key={j} size={11} color="#FFC43E" />
                     ))}
                   </div>
-                  <p
-                    className="font-display italic text-[0.95rem] leading-[1.55] text-cream"
-                    style={{ opacity: 0.78 }}
-                  >
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div
-                    className="font-mono text-[10px] tracking-[0.22em] text-gold uppercase mt-2"
-                    style={{ opacity: 0.55 }}
-                  >
-                    — {t.attr}
+                  {t.paragraphs.map((p, pi) => (
+                    <p
+                      key={pi}
+                      className="font-display italic text-[0.95rem] leading-[1.55] text-cream"
+                      style={{ opacity: 0.78, marginBottom: pi < t.paragraphs.length - 1 ? "0.65em" : 0 }}
+                    >
+                      {pi === 0 && <>&ldquo;</>}{p}{pi === t.paragraphs.length - 1 && <>&rdquo;</>}
+                    </p>
+                  ))}
+                  <div className="mt-2.5">
+                    <div
+                      className="font-condensed font-semibold text-[0.88rem] text-cream tracking-[0.04em]"
+                      style={{ opacity: 0.9 }}
+                    >
+                      {t.name}
+                    </div>
+                    <div
+                      className="font-mono text-[9px] tracking-[0.22em] text-gold uppercase mt-0.5"
+                      style={{ opacity: 0.55 }}
+                    >
+                      {t.since}
+                    </div>
                   </div>
                 </div>
               ))}
