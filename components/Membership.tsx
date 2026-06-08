@@ -4,6 +4,13 @@ import { Star } from "./Star";
 
 const STAR_INDICES = [0, 1, 2, 3, 4];
 
+const memberBenefits = [
+  ["Early Access & Exclusive Merch", "You'll be the first to know!"],
+  ["$3,000 in Travel Cash EVERY YEAR", "Book hotels, cruises, car rentals and more — yours, included."],
+  ["WeSalute+ ID Card", "Get access to your savings & benefits everywhere you go!"],
+  ["Over a Thousand Offers & Benefits", "Exclusive to WeSalute+ Members, save every single day."],
+] as const;
+
 const testimonials = [
   { quote: "Your testimonial will appear here.", attr: "WeSalute+ Member" },
   { quote: "Your testimonial will appear here.", attr: "WeSalute+ Member" },
@@ -32,7 +39,7 @@ export function Membership() {
             >
               Get even MORE with WeSalute+.{" "}
               <br className="hidden sm:block" />
-              <Italic color="#FFC43E">Get A Real Thank You&reg;.</Italic>
+              <Italic color="#FFC43E">Get A Real Thank You<sup>&reg;</sup>.</Italic>
             </h2>
             <p
               className="text-[1.08rem] leading-[1.65] text-cream mb-8"
@@ -43,6 +50,22 @@ export function Membership() {
               WeSalute Travel Cash gift. Plus, a personalized WeSalute+ ID Card,
               and over a thousand offers &amp; benefits.
             </p>
+
+            <div className="grid gap-px bg-slateLine mb-8">
+              {memberBenefits.map(([title, body]) => (
+                <div key={title} className="bg-slate px-6 py-5 flex gap-4 items-start">
+                  <Star size={14} color="#FFC43E" style={{ marginTop: "5px", flexShrink: 0 }} />
+                  <div>
+                    <div className="font-condensed font-bold text-[1.05rem] text-cream tracking-[0.02em]">
+                      {title}
+                    </div>
+                    <div className="text-[0.9rem] text-cream mt-0.5" style={{ opacity: 0.7 }}>
+                      {body}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             <button className="cta cta-gold">
               Get $3,250 Travel Cash with WeSalute+
