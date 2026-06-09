@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
 
+const TRAVEL_CASH_URL = "https://www.wesalute.com/offer/53361-get-250-travel-cash";
+
 const benefits = [
   [
     "Open to everyone",
@@ -53,6 +55,21 @@ export function TravelCash() {
               <br className="hidden sm:block" />
               Travel Cash Gift.
             </h2>
+
+            {/* Mobile-only image */}
+            <div
+              className="md:hidden relative w-full my-6"
+              style={{ aspectRatio: "1/1" }}
+            >
+              <Image
+                src="/images/250-travel-cash.png"
+                alt="$250 in Free Travel Cash"
+                fill
+                style={{ objectFit: "contain", objectPosition: "center" }}
+                sizes="100vw"
+              />
+            </div>
+
             <p
               className="text-[1.15rem] leading-[1.6] text-cream mb-8"
               style={{ opacity: 0.85 }}
@@ -68,9 +85,7 @@ export function TravelCash() {
                   className="flex gap-4 py-3.5 items-start"
                   style={{ borderTop: "1px solid #163756" }}
                 >
-                  <div
-                    className="w-6 h-6 bg-gold text-slate rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
-                  >
+                  <div className="w-6 h-6 bg-gold text-slate rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
                     ✓
                   </div>
                   <div>
@@ -85,17 +100,26 @@ export function TravelCash() {
               ))}
             </ul>
 
-            <button className="cta cta-gold">
+            <a
+              href={TRAVEL_CASH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta cta-gold"
+              style={{ textDecoration: "none" }}
+            >
               Claim $250 Travel Cash
               <span className="font-display text-[16px]">→</span>
-            </button>
+            </a>
             <div className="mt-3 font-mono text-[10px] tracking-[0.24em] text-cream uppercase" style={{ opacity: 0.4 }}>
               Terms apply. Travel Cash can be redeemed as Savings Credits on the WeSalute Travel platform.
             </div>
           </div>
 
-          {/* Right — $250 travel cash image */}
-          <div className="relative w-full" style={{ aspectRatio: "1 / 1", minHeight: "320px" }}>
+          {/* Right — image, hidden on mobile (shown inline above on mobile) */}
+          <div
+            className="relative w-full hidden md:block"
+            style={{ aspectRatio: "1 / 1", minHeight: "320px" }}
+          >
             <Image
               src="/images/250-travel-cash.png"
               alt="$250 in Free Travel Cash"

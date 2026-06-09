@@ -64,11 +64,25 @@ export function Hero() {
           </p>
 
           <div className="reveal reveal-4 flex gap-4 flex-wrap">
-            <button className="cta cta-gold">
+            <a
+              href="https://www.wesalute.com/offer/53361-get-250-travel-cash"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta cta-gold"
+              style={{ textDecoration: "none" }}
+            >
               Claim $250 Travel Cash
               <span className="font-display text-[16px]">→</span>
-            </button>
-            <button className="cta cta-ghost">Shop The Collection</button>
+            </a>
+            <a
+              href="https://merchandise.wesalute.com/collections/wesalute-250-limited-edition"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta cta-ghost"
+              style={{ textDecoration: "none" }}
+            >
+              Shop The Collection
+            </a>
           </div>
 
         </div>

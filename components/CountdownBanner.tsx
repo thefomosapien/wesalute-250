@@ -150,13 +150,16 @@ export function CountdownBanner() {
 
         {/* CTA */}
         <div className="shrink-0 md:ml-auto">
-          <button
+          <a
+            href="https://www.wesalute.com/offer/53361-get-250-travel-cash"
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta cta-gold"
-            style={{ fontSize: "12px", padding: "12px 24px", letterSpacing: "0.2em" }}
+            style={{ fontSize: "12px", padding: "12px 24px", letterSpacing: "0.2em", textDecoration: "none" }}
           >
             Claim Your $250
             <span className="font-display text-[14px]">→</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>

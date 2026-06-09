@@ -6,6 +6,8 @@ import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
 import { Star } from "./Star";
 
+const PLUS_URL = "https://www.wesalute.com/offer/wesalute-travel";
+
 const STAR_INDICES = [0, 1, 2, 3, 4];
 
 const memberBenefits = [
@@ -62,6 +64,21 @@ export function Membership() {
               <Italic color="#FFC43E">A Real Thank You<sup>&reg;</sup></Italic>
               {" "}with WeSalute+
             </h2>
+
+            {/* Mobile-only image */}
+            <div
+              className="md:hidden relative w-full my-6"
+              style={{ aspectRatio: "4/3", background: "#000F1C" }}
+            >
+              <Image
+                src="/images/cruise-family-fun.png"
+                alt="Family enjoying travel with WeSalute+ Travel Cash"
+                fill
+                style={{ objectFit: "contain", objectPosition: "center" }}
+                sizes="100vw"
+              />
+            </div>
+
             <p
               className="text-[1.08rem] leading-[1.65] text-cream mb-8"
               style={{ opacity: 0.82 }}
@@ -88,14 +105,20 @@ export function Membership() {
               ))}
             </div>
 
-            <button className="cta cta-gold">
+            <a
+              href={PLUS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta cta-gold"
+              style={{ textDecoration: "none" }}
+            >
               Get $3,000 Travel Cash with WeSalute+
               <span className="font-display text-[16px]">→</span>
-            </button>
+            </a>
           </div>
 
-          {/* Right — image + testimonial carousel */}
-          <div className="flex flex-col gap-5">
+          {/* Right — image + testimonial carousel (desktop) */}
+          <div className="hidden md:flex flex-col gap-5">
 
             {/* Cruise image — full, uncropped */}
             <div
@@ -107,7 +130,7 @@ export function Membership() {
                 alt="Family enjoying travel with WeSalute+ Travel Cash"
                 fill
                 style={{ objectFit: "contain", objectPosition: "center" }}
-                sizes="(max-width: 880px) 100vw, 50vw"
+                sizes="50vw"
               />
             </div>
 

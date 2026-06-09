@@ -2,10 +2,13 @@ import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { SectionTitle, Italic } from "./SectionTitle";
 
+const SHOP_BASE = "https://merchandise.wesalute.com/products";
+
 const collections = [
   {
     title: "WeSalute 250 — Limited Edition",
     handle: "wesalute-250-limited-edition",
+    collectionUrl: "https://merchandise.wesalute.com/collections/wesalute-250-limited-edition",
     desc: "Designs honoring every community that has answered the call — military, veterans, first responders, nurses, educators, and civil servants. Each design limited to 250 orders.",
     tag: "Limited Edition",
     tagColor: "#FFC43E",
@@ -39,6 +42,7 @@ const collections = [
   {
     title: "America 250 — WeSalute+ Exclusive Merch",
     handle: "wesalute-250-member-edition",
+    collectionUrl: "https://merchandise.wesalute.com/collections/wesalute-250-member-edition",
     desc: "Exclusive merch for WeSalute+ Members — not available anywhere else in the WeSalute 250 collection. Our way of recognizing the people who made this community what it is.",
     tag: "Members Only",
     tagColor: "#B5DFD0",
@@ -72,6 +76,7 @@ const collections = [
   {
     title: "Gifts & Bundles",
     handle: "gifts-bundles",
+    collectionUrl: "https://merchandise.wesalute.com/collections/gifts-bundles",
     desc: "Curated gift sets for the moments that matter — military retirements, Nurses Week, Veterans Day, and every occasion when someone just deserves to be acknowledged.",
     tag: "Gift Sets",
     tagColor: "#FFC43E",
@@ -127,7 +132,14 @@ export function Collection() {
                     style={{ background: "#163756" }}
                   >
                     {col.products.slice(0, 4).map((p) => (
-                      <div key={p.handle} className="relative overflow-hidden">
+                      <a
+                        key={p.handle}
+                        href={`${SHOP_BASE}/${p.handle}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative overflow-hidden block"
+                        style={{ textDecoration: "none" }}
+                      >
                         <Image
                           src={p.image}
                           alt={p.title}
@@ -135,21 +147,29 @@ export function Collection() {
                           style={{ objectFit: "cover" }}
                           sizes="(max-width: 768px) 50vw, 18vw"
                         />
-                      </div>
+                      </a>
                     ))}
                   </div>
                 ) : (
-                  <Image
-                    src={col.products[0].image}
-                    alt={col.products[0].title}
-                    fill
-                    style={{
-                      objectFit: "cover",
-                      transition: "transform 0.5s ease",
-                    }}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="group-hover:scale-105"
-                  />
+                  <a
+                    href={`${SHOP_BASE}/${col.products[0].handle}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 block"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Image
+                      src={col.products[0].image}
+                      alt={col.products[0].title}
+                      fill
+                      style={{
+                        objectFit: "cover",
+                        transition: "transform 0.5s ease",
+                      }}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="group-hover:scale-105"
+                    />
+                  </a>
                 )}
 
                 {/* Gradient overlay */}
@@ -185,17 +205,21 @@ export function Collection() {
                 >
                   {col.desc}
                 </p>
-                <button
+                <a
+                  href={col.collectionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-condensed font-bold text-[12px] tracking-[0.2em] uppercase self-start px-5 py-3 transition-colors"
                   style={{
                     color: col.tagColor,
                     border: `1px solid ${col.tagColor}50`,
                     background: "transparent",
                     cursor: "pointer",
+                    textDecoration: "none",
                   }}
                 >
                   Shop Collection →
-                </button>
+                </a>
               </div>
             </div>
           ))}

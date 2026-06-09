@@ -2,6 +2,9 @@ import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { SectionTitle, Italic } from "./SectionTitle";
 
+const SHOP_BASE = "https://merchandise.wesalute.com/products";
+const SHOP_ALL_URL = "https://merchandise.wesalute.com/collections/wesalute-250-limited-edition";
+
 const featuredProducts = [
   {
     name: "Eagle Ringer Tee",
@@ -103,23 +106,34 @@ export function ThroughLine() {
                 Limited merch collection to mark the event.
               </p>
             </div>
-            <button
+            <a
+              href={SHOP_ALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-condensed font-bold text-[12px] tracking-[0.2em] uppercase text-gold shrink-0 ml-6"
               style={{
                 background: "transparent",
                 border: "1px solid rgba(255,196,62,0.35)",
                 cursor: "pointer",
                 padding: "10px 20px",
+                textDecoration: "none",
               }}
             >
               Shop All →
-            </button>
+            </a>
           </div>
 
           {/* Product grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {featuredProducts.map((product) => (
-              <div key={product.handle} className="group cursor-pointer">
+              <a
+                key={product.handle}
+                href={`${SHOP_BASE}/${product.handle}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group cursor-pointer"
+                style={{ textDecoration: "none" }}
+              >
                 {/* Image */}
                 <div
                   className="relative w-full overflow-hidden"
@@ -159,7 +173,7 @@ export function ThroughLine() {
                     From ${product.price}
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

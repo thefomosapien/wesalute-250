@@ -51,12 +51,15 @@ export function Nav() {
                 {item}
               </a>
             ))}
-            <button
+            <a
+              href="https://www.wesalute.com/offer/53361-get-250-travel-cash"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta cta-gold"
-              style={{ padding: "12px 24px", fontSize: "12px" }}
+              style={{ padding: "12px 24px", fontSize: "12px", textDecoration: "none" }}
             >
               Claim $250 Travel Cash
-            </button>
+            </a>
           </div>
 
           {/* Hamburger */}
@@ -111,13 +114,16 @@ export function Nav() {
               {item}
             </a>
           ))}
-          <button
+          <a
+            href="https://www.wesalute.com/offer/53361-get-250-travel-cash"
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta cta-gold"
             onClick={() => setMenuOpen(false)}
-            style={{ fontSize: "13px", justifyContent: "center" }}
+            style={{ fontSize: "13px", justifyContent: "center", textDecoration: "none" }}
           >
             Claim $250 Travel Cash
-          </button>
+          </a>
         </div>
       </div>
     </nav>
