@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
 import { Star } from "./Star";
@@ -13,30 +16,26 @@ const memberBenefits = [
 
 const testimonials = [
   {
-    paragraphs: [
-      "In less than six months, my family has saved over $1,100 through WeSalute+! We saved several hundred dollars with JetBlue alone.",
-      "Between the 5% off and free checked bags, we are now pretty devoted to using our WeSalute+ membership to fly JetBlue wherever we go.",
-    ],
+    quote: "In less than six months, my family saved over $1,100 with WeSalute+. Between the 5% off and free checked bags on JetBlue, it pays for itself fast.",
     name: "Amber Cooper",
     since: "WeSalute+ Member since 2022",
   },
   {
-    paragraphs: [
-      "I joined WeSalute+ in 2016. I looked at the WeSalute website and saw all of the retail and travel partners, I immediately enrolled in the annual plan. I've enjoyed tracking all my savings with the WeSalute+ ID Card. In just a few transactions, my card has paid for itself!",
-    ],
+    quote: "I enrolled in 2016 after seeing all the travel and retail partners. In just a few transactions, my WeSalute+ card had already paid for itself!",
     name: "Holly Landau",
     since: "WeSalute+ Member since 2016",
   },
   {
-    paragraphs: [
-      "Thank you very much. WeSalute+ has been extremely rewarding to me. I am very elated to be a member. The services and benefits are spectacular.",
-    ],
+    quote: "WeSalute+ has been extremely rewarding — the services and benefits are spectacular.",
     name: "Charles F. Harris",
     since: "WeSalute Member since 2019",
   },
 ];
 
 export function Membership() {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const t = testimonials[activeIdx];
+
   return (
     <section
       className="relative px-8 py-20 md:py-[140px]"
@@ -92,66 +91,118 @@ export function Membership() {
             </button>
           </div>
 
-          {/* Right — Testimonials */}
-          <div
-            className="relative px-8 py-10 md:px-10 md:py-12 flex flex-col"
-            style={{
-              background:
-                "linear-gradient(145deg, rgba(255,196,62,0.08) 0%, rgba(255,196,62,0.02) 100%)",
-              border: "1px solid rgba(255,196,62,0.27)",
-            }}
-          >
-            {/* Rating header */}
-            <div className="flex items-center gap-3 mb-8">
-              <div className="flex gap-1">
-                {STAR_INDICES.map((i) => (
-                  <Star key={i} size={17} color="#FFC43E" />
-                ))}
+          {/* Right — promo card + testimonial carousel */}
+          <div className="flex flex-col gap-5">
+
+            {/* Travel Cash promo placeholder */}
+            <div
+              className="relative overflow-hidden flex flex-col items-center justify-center"
+              style={{
+                minHeight: "260px",
+                background: "linear-gradient(135deg, #0B2842 0%, #001428 60%, #060D1A 100%)",
+                border: "1px solid rgba(255,196,62,0.22)",
+              }}
+            >
+              {/* Decorative arc rings */}
+              <div className="absolute pointer-events-none" style={{ width: "420px", height: "420px", borderRadius: "50%", border: "1px solid rgba(255,196,62,0.07)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
+              <div className="absolute pointer-events-none" style={{ width: "300px", height: "300px", borderRadius: "50%", border: "1px solid rgba(255,196,62,0.1)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
+
+              {/* Placeholder badge */}
+              <div
+                className="absolute top-3 right-3 font-mono text-[8px] tracking-[0.18em] uppercase px-2 py-1"
+                style={{ background: "rgba(255,196,62,0.1)", color: "rgba(255,196,62,0.6)", border: "1px solid rgba(255,196,62,0.2)" }}
+              >
+                Image Placeholder
               </div>
-              <div className="font-mono text-[10px] tracking-[0.24em] text-gold uppercase">
-                5.0 · WeSalute+ Members
+
+              {/* Content */}
+              <div className="relative text-center px-8 py-10">
+                <div className="font-mono text-[9px] tracking-[0.32em] uppercase text-gold mb-3" style={{ opacity: 0.6 }}>
+                  WeSalute+ Travel Cash
+                </div>
+                <div
+                  className="font-display font-bold text-gold leading-none"
+                  style={{ fontSize: "clamp(4.5rem, 10vw, 6.5rem)" }}
+                >
+                  $3,000
+                </div>
+                <div className="font-condensed font-bold text-[0.9rem] tracking-[0.14em] uppercase text-cream mt-2" style={{ opacity: 0.7 }}>
+                  Every Year
+                </div>
+                <div
+                  className="mx-auto mt-4 mb-4"
+                  style={{ width: "40px", height: "1px", background: "rgba(255,196,62,0.4)" }}
+                />
+                <div className="font-mono text-[9px] tracking-[0.22em] uppercase text-cream" style={{ opacity: 0.45 }}>
+                  Included with WeSalute+
+                </div>
               </div>
             </div>
 
-            {/* Testimonials */}
-            <div className="flex flex-col">
-              {testimonials.map((t, i) => (
-                <div
-                  key={i}
-                  className="py-5"
-                  style={{ borderTop: "1px solid #163756" }}
-                >
-                  <div className="flex gap-0.5 mb-3">
-                    {STAR_INDICES.map((j) => (
-                      <Star key={j} size={11} color="#FFC43E" />
-                    ))}
-                  </div>
-                  {t.paragraphs.map((p, pi) => (
-                    <p
-                      key={pi}
-                      className="font-display italic text-[0.95rem] leading-[1.55] text-cream"
-                      style={{ opacity: 0.78, marginBottom: pi < t.paragraphs.length - 1 ? "0.65em" : 0 }}
-                    >
-                      {pi === 0 && <>&ldquo;</>}{p}{pi === t.paragraphs.length - 1 && <>&rdquo;</>}
-                    </p>
+            {/* Testimonial carousel */}
+            <div
+              className="px-7 pt-6 pb-5"
+              style={{
+                background: "linear-gradient(145deg, rgba(255,196,62,0.07) 0%, rgba(255,196,62,0.02) 100%)",
+                border: "1px solid rgba(255,196,62,0.27)",
+              }}
+            >
+              {/* Header */}
+              <div className="flex items-center gap-2.5 mb-5">
+                <div className="flex gap-0.5">
+                  {STAR_INDICES.map((i) => (
+                    <Star key={i} size={13} color="#FFC43E" />
                   ))}
-                  <div className="mt-2.5">
-                    <div
-                      className="font-condensed font-semibold text-[0.88rem] text-cream tracking-[0.04em]"
-                      style={{ opacity: 0.9 }}
-                    >
-                      {t.name}
-                    </div>
-                    <div
-                      className="font-mono text-[9px] tracking-[0.22em] text-gold uppercase mt-0.5"
-                      style={{ opacity: 0.55 }}
-                    >
-                      {t.since}
-                    </div>
-                  </div>
                 </div>
-              ))}
+                <div className="font-mono text-[9px] tracking-[0.24em] text-gold uppercase">
+                  5.0 · WeSalute+ Members
+                </div>
+              </div>
+
+              {/* Active slide */}
+              <p
+                className="font-display italic text-[0.93rem] leading-[1.55] text-cream mb-3"
+                style={{ opacity: 0.82, minHeight: "3.5em" }}
+              >
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div className="mb-5">
+                <div
+                  className="font-condensed font-semibold text-[0.88rem] text-cream tracking-[0.04em]"
+                  style={{ opacity: 0.9 }}
+                >
+                  {t.name}
+                </div>
+                <div
+                  className="font-mono text-[9px] tracking-[0.22em] text-gold uppercase mt-0.5"
+                  style={{ opacity: 0.55 }}
+                >
+                  {t.since}
+                </div>
+              </div>
+
+              {/* Dot navigation */}
+              <div className="flex items-center gap-2">
+                {testimonials.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveIdx(i)}
+                    aria-label={`Testimonial ${i + 1}`}
+                    style={{
+                      width: i === activeIdx ? "22px" : "6px",
+                      height: "6px",
+                      borderRadius: "3px",
+                      background: i === activeIdx ? "#FFC43E" : "rgba(255,196,62,0.28)",
+                      border: "none",
+                      cursor: "pointer",
+                      transition: "all 0.25s ease",
+                      padding: 0,
+                    }}
+                  />
+                ))}
+              </div>
             </div>
+
           </div>
         </div>
       </div>
