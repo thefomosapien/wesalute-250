@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
 import { Star } from "./Star";
@@ -94,47 +95,25 @@ export function Membership() {
           {/* Right — promo card + testimonial carousel */}
           <div className="flex flex-col gap-5">
 
-            {/* Travel Cash promo placeholder */}
-            <div
-              className="relative overflow-hidden flex flex-col items-center justify-center"
-              style={{
-                minHeight: "260px",
-                background: "linear-gradient(135deg, #0B2842 0%, #001428 60%, #060D1A 100%)",
-                border: "1px solid rgba(255,196,62,0.22)",
-              }}
-            >
-              {/* Decorative arc rings */}
-              <div className="absolute pointer-events-none" style={{ width: "420px", height: "420px", borderRadius: "50%", border: "1px solid rgba(255,196,62,0.07)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
-              <div className="absolute pointer-events-none" style={{ width: "300px", height: "300px", borderRadius: "50%", border: "1px solid rgba(255,196,62,0.1)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
-
-              {/* Placeholder badge */}
+            {/* Travel Cash promo image */}
+            <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src="/images/cruise-family-fun.png"
+                alt="Family enjoying travel with WeSalute+ Travel Cash"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                sizes="(max-width: 880px) 100vw, 50vw"
+              />
+              {/* Overlay caption */}
               <div
-                className="absolute top-3 right-3 font-mono text-[8px] tracking-[0.18em] uppercase px-2 py-1"
-                style={{ background: "rgba(255,196,62,0.1)", color: "rgba(255,196,62,0.6)", border: "1px solid rgba(255,196,62,0.2)" }}
+                className="absolute bottom-0 left-0 right-0 px-6 py-5"
+                style={{ background: "linear-gradient(to top, rgba(0,15,28,0.82) 0%, transparent 100%)" }}
               >
-                Image Placeholder
-              </div>
-
-              {/* Content */}
-              <div className="relative text-center px-8 py-10">
-                <div className="font-mono text-[9px] tracking-[0.32em] uppercase text-gold mb-3" style={{ opacity: 0.6 }}>
+                <div className="font-mono text-[9px] tracking-[0.28em] uppercase text-gold mb-1" style={{ opacity: 0.8 }}>
                   WeSalute+ Travel Cash
                 </div>
-                <div
-                  className="font-display font-bold text-gold leading-none"
-                  style={{ fontSize: "clamp(4.5rem, 10vw, 6.5rem)" }}
-                >
-                  $3,000
-                </div>
-                <div className="font-condensed font-bold text-[0.9rem] tracking-[0.14em] uppercase text-cream mt-2" style={{ opacity: 0.7 }}>
-                  Every Year
-                </div>
-                <div
-                  className="mx-auto mt-4 mb-4"
-                  style={{ width: "40px", height: "1px", background: "rgba(255,196,62,0.4)" }}
-                />
-                <div className="font-mono text-[9px] tracking-[0.22em] uppercase text-cream" style={{ opacity: 0.45 }}>
-                  Included with WeSalute+
+                <div className="font-display font-bold text-cream text-[1.4rem] leading-tight">
+                  $3,000 <span style={{ color: "#FFC43E" }}>every year.</span>
                 </div>
               </div>
             </div>
