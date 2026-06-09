@@ -36,6 +36,8 @@ const testimonials = [
 export function Membership() {
   const [activeIdx, setActiveIdx] = useState(0);
   const t = testimonials[activeIdx];
+  const prev = () => setActiveIdx((i) => (i - 1 + testimonials.length) % testimonials.length);
+  const next = () => setActiveIdx((i) => (i + 1) % testimonials.length);
 
   return (
     <section
@@ -46,7 +48,7 @@ export function Membership() {
     >
       <div className="max-w-[1200px] mx-auto">
         <div
-          className="grid gap-[72px] items-start hero-grid"
+          className="grid gap-[72px] items-center hero-grid"
           style={{ gridTemplateColumns: "1fr 1fr" }}
         >
           {/* Left — pitch */}
@@ -65,7 +67,7 @@ export function Membership() {
               style={{ opacity: 0.82 }}
             >
               With WeSalute+ you&apos;ll get a{" "}
-              <span className="font-bold" style={{ color: "#FFC43E" }}>$3,250</span>{" "}
+              <span className="font-bold" style={{ color: "#FFC43E" }}>$3,000</span>{" "}
               WeSalute Travel Cash gift. Plus, a personalized WeSalute+ ID Card,
               and over a thousand offers &amp; benefits.
             </p>
@@ -87,35 +89,26 @@ export function Membership() {
             </div>
 
             <button className="cta cta-gold">
-              Get $3,250 Travel Cash with WeSalute+
+              Get $3,000 Travel Cash with WeSalute+
               <span className="font-display text-[16px]">→</span>
             </button>
           </div>
 
-          {/* Right — promo card + testimonial carousel */}
+          {/* Right — image + testimonial carousel */}
           <div className="flex flex-col gap-5">
 
-            {/* Travel Cash promo image */}
-            <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+            {/* Cruise image — full, uncropped */}
+            <div
+              className="relative w-full"
+              style={{ aspectRatio: "4 / 3", background: "#000F1C" }}
+            >
               <Image
                 src="/images/cruise-family-fun.png"
                 alt="Family enjoying travel with WeSalute+ Travel Cash"
                 fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
+                style={{ objectFit: "contain", objectPosition: "center" }}
                 sizes="(max-width: 880px) 100vw, 50vw"
               />
-              {/* Overlay caption */}
-              <div
-                className="absolute bottom-0 left-0 right-0 px-6 py-5"
-                style={{ background: "linear-gradient(to top, rgba(0,15,28,0.82) 0%, transparent 100%)" }}
-              >
-                <div className="font-mono text-[9px] tracking-[0.28em] uppercase text-gold mb-1" style={{ opacity: 0.8 }}>
-                  WeSalute+ Travel Cash
-                </div>
-                <div className="font-display font-bold text-cream text-[1.4rem] leading-tight">
-                  $3,000 <span style={{ color: "#FFC43E" }}>every year.</span>
-                </div>
-              </div>
             </div>
 
             {/* Testimonial carousel */}
@@ -160,25 +153,68 @@ export function Membership() {
                 </div>
               </div>
 
-              {/* Dot navigation */}
-              <div className="flex items-center gap-2">
-                {testimonials.map((_, i) => (
+              {/* Navigation — dots + arrows */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  {testimonials.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setActiveIdx(i)}
+                      aria-label={`Testimonial ${i + 1}`}
+                      style={{
+                        width: i === activeIdx ? "22px" : "6px",
+                        height: "6px",
+                        borderRadius: "3px",
+                        background: i === activeIdx ? "#FFC43E" : "rgba(255,196,62,0.28)",
+                        border: "none",
+                        cursor: "pointer",
+                        transition: "all 0.25s ease",
+                        padding: 0,
+                      }}
+                    />
+                  ))}
+                </div>
+
+                <div className="flex gap-2">
                   <button
-                    key={i}
-                    onClick={() => setActiveIdx(i)}
-                    aria-label={`Testimonial ${i + 1}`}
+                    onClick={prev}
+                    aria-label="Previous testimonial"
+                    className="font-display text-gold transition-opacity duration-150 hover:opacity-100"
                     style={{
-                      width: i === activeIdx ? "22px" : "6px",
-                      height: "6px",
-                      borderRadius: "3px",
-                      background: i === activeIdx ? "#FFC43E" : "rgba(255,196,62,0.28)",
-                      border: "none",
+                      background: "rgba(255,196,62,0.1)",
+                      border: "1px solid rgba(255,196,62,0.3)",
+                      width: "30px",
+                      height: "30px",
                       cursor: "pointer",
-                      transition: "all 0.25s ease",
-                      padding: 0,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "14px",
+                      opacity: 0.7,
                     }}
-                  />
-                ))}
+                  >
+                    ←
+                  </button>
+                  <button
+                    onClick={next}
+                    aria-label="Next testimonial"
+                    className="font-display text-gold transition-opacity duration-150 hover:opacity-100"
+                    style={{
+                      background: "rgba(255,196,62,0.1)",
+                      border: "1px solid rgba(255,196,62,0.3)",
+                      width: "30px",
+                      height: "30px",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "14px",
+                      opacity: 0.7,
+                    }}
+                  >
+                    →
+                  </button>
+                </div>
               </div>
             </div>
 
