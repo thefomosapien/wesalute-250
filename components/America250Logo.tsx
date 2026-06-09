@@ -16,7 +16,7 @@ export function America250Logo({
   if (useAsset) {
     return (
       <Image
-        src="/america-250-mark.png"
+        src="/america-250-mark-new.png"
         alt="America 250 — One Nation. 250 Years of Service."
         width={size}
         height={height}
