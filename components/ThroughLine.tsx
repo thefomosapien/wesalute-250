@@ -4,32 +4,32 @@ import { SectionTitle, Italic } from "./SectionTitle";
 
 const featuredProducts = [
   {
-    name: "1776 / 2026 Tee",
-    handle: "america-250-1776-2026-tee",
+    name: "Eagle Ringer Tee",
+    handle: "america-250-eagle-ringer-tee",
+    price: "42.00",
+    image:
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-ringer-t-shirt-natural-midnight-navy-front-6a1e5f7969cce.jpg?v=1780375436",
+  },
+  {
+    name: "Service Unites America Tee",
+    handle: "america-250-service-unites-america-tee",
     price: "30.00",
     image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-white-front-6a1e1eec00a21.jpg?v=1780358905",
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-chambray-back-6a2261066a12a.png?v=1780637983",
   },
   {
-    name: "Liberty Bell Tee",
-    handle: "america-250-liberty-bell-tee",
-    price: "30.00",
+    name: "Vintage Ballcap",
+    handle: "america-250-vintage-ballcap",
+    price: "25.00",
     image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/unisex-garment-dyed-heavyweight-t-shirt-white-front-6a1e552a7a518.jpg?v=1780372794",
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/vintage-cap-navy-front-6a22099881e4f.jpg?v=1780615590",
   },
   {
-    name: "Corduroy Ballcap",
-    handle: "vintage-corduroy-cap",
-    price: "28.00",
+    name: "Service Through Centuries Tote",
+    handle: "america-250-service-through-centuries-tote-bag",
+    price: "38.00",
     image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/vintage-corduroy-cap-navy-front-6a1e6492ec22f.jpg?v=1780376739",
-  },
-  {
-    name: "American Since 1776 Snapback",
-    handle: "5-panel-cap",
-    price: "22.00",
-    image:
-      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/5-panel-mid-profile-baseball-cap-royal-natural-front-6a2064d21da6c.jpg?v=1780507870",
+      "https://cdn.shopify.com/s/files/1/0905/1045/9168/files/organic-denim-tote-bag-denim-blue-right-front-6a220bf0a2efd.jpg?v=1780616189",
   },
 ] as const;
 

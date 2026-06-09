@@ -56,9 +56,9 @@ export function Membership() {
               className="font-display font-bold leading-[1.05] tracking-[-0.025em] text-cream mt-5 mb-6"
               style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)" }}
             >
-              Get even MORE with WeSalute+.{" "}
-              <br className="hidden sm:block" />
-              <Italic color="#FFC43E">Get A Real Thank You<sup>&reg;</sup>.</Italic>
+              Get{" "}
+              <Italic color="#FFC43E">A Real Thank You<sup>&reg;</sup></Italic>
+              {" "}with WeSalute+.
             </h2>
             <p
               className="text-[1.08rem] leading-[1.65] text-cream mb-8"
