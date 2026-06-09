@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { TRAVEL_CASH_250_URL } from "@/lib/links";
 
 const navLinks = ["Story", "Communities", "Travel Cash", "Limited Merch"];
 
@@ -52,7 +53,7 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="https://www.wesalute.com/offer/53361-get-250-travel-cash"
+              href={TRAVEL_CASH_250_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="cta cta-gold"
@@ -115,7 +116,7 @@ export function Nav() {
             </a>
           ))}
           <a
-            href="https://www.wesalute.com/offer/53361-get-250-travel-cash"
+            href={TRAVEL_CASH_250_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="cta cta-gold"

@@ -7,6 +7,7 @@ import { Italic } from "./SectionTitle";
 import { Star } from "./Star";
 import { ImageModal } from "./ImageModal";
 import { timeline, TimelineEntry } from "@/lib/content";
+import { TRAVEL_CASH_250_URL, COLLECTION_LIMITED_URL } from "@/lib/links";
 
 export function SharedHistory() {
   const [activePhoto, setActivePhoto] = useState<{
@@ -203,19 +204,25 @@ export function SharedHistory() {
             27 years of A Real Thank You. Shop the collection that marks the moment.
           </p>
           <div className="flex flex-col w-full gap-2">
-            <button
+            <a
+              href={COLLECTION_LIMITED_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta cta-gold w-full justify-center"
-              style={{ padding: "14px 20px", fontSize: "13px" }}
+              style={{ padding: "14px 20px", fontSize: "13px", textDecoration: "none" }}
             >
               Shop The 250 Collection
               <span className="font-display text-[15px]">→</span>
-            </button>
-            <button
+            </a>
+            <a
+              href={TRAVEL_CASH_250_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-condensed font-bold text-[12px] tracking-[0.2em] uppercase text-americaRedDeep"
-              style={{ background: "none", border: "none", cursor: "pointer", padding: "8px" }}
+              style={{ textDecoration: "none", padding: "8px" }}
             >
               Claim $250 in Free Travel Cash →
-            </button>
+            </a>
           </div>
         </div>
 

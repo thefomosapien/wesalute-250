@@ -5,10 +5,22 @@ import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
 import { Star } from "./Star";
-
-const PLUS_URL = "https://www.wesalute.com/offer/wesalute-travel";
+import { TRAVEL_CASH_PLUS_URL } from "@/lib/links";
 
 const STAR_INDICES = [0, 1, 2, 3, 4];
+
+const arrowButtonStyle: React.CSSProperties = {
+  background: "rgba(255,196,62,0.1)",
+  border: "1px solid rgba(255,196,62,0.3)",
+  width: "30px",
+  height: "30px",
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: "14px",
+  opacity: 0.7,
+};
 
 const memberBenefits = [
   ["Early Access & Exclusive Merch", "You'll be the first to know!"],
@@ -43,6 +55,7 @@ export function Membership() {
 
   return (
     <section
+      id="membership"
       className="relative px-8 py-20 md:py-[140px]"
       style={{
         background: "linear-gradient(180deg, #000F1C 0%, #001E33 100%)",
@@ -106,7 +119,7 @@ export function Membership() {
             </div>
 
             <a
-              href={PLUS_URL}
+              href={TRAVEL_CASH_PLUS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="cta cta-gold"
@@ -203,18 +216,7 @@ export function Membership() {
                     onClick={prev}
                     aria-label="Previous testimonial"
                     className="font-display text-gold transition-opacity duration-150 hover:opacity-100"
-                    style={{
-                      background: "rgba(255,196,62,0.1)",
-                      border: "1px solid rgba(255,196,62,0.3)",
-                      width: "30px",
-                      height: "30px",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "14px",
-                      opacity: 0.7,
-                    }}
+                    style={arrowButtonStyle}
                   >
                     ←
                   </button>
@@ -222,18 +224,7 @@ export function Membership() {
                     onClick={next}
                     aria-label="Next testimonial"
                     className="font-display text-gold transition-opacity duration-150 hover:opacity-100"
-                    style={{
-                      background: "rgba(255,196,62,0.1)",
-                      border: "1px solid rgba(255,196,62,0.3)",
-                      width: "30px",
-                      height: "30px",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "14px",
-                      opacity: 0.7,
-                    }}
+                    style={arrowButtonStyle}
                   >
                     →
                   </button>

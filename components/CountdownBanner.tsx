@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { TRAVEL_CASH_250_URL } from "@/lib/links";
 
 type TimeLeft = {
   days: number;
@@ -151,7 +152,7 @@ export function CountdownBanner() {
         {/* CTA */}
         <div className="shrink-0 md:ml-auto">
           <a
-            href="https://www.wesalute.com/offer/53361-get-250-travel-cash"
+            href={TRAVEL_CASH_250_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="cta cta-gold"

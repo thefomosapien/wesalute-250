@@ -1,8 +1,6 @@
 import { StarField } from "./StarField";
 import { Eyebrow } from "./Eyebrow";
-
-const JOIN_URL = "https://www.wesalute.com/plans";
-const SHOP_URL = "https://merchandise.wesalute.com/collections/wesalute-250-limited-edition";
+import { JOIN_URL, COLLECTION_LIMITED_URL } from "@/lib/links";
 
 export function FinalSalute() {
   return (
@@ -47,7 +45,7 @@ export function FinalSalute() {
             <span className="font-display text-[16px]">→</span>
           </a>
           <a
-            href={SHOP_URL}
+            href={COLLECTION_LIMITED_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="cta cta-ghost"

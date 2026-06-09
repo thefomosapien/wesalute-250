@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
-
-const TRAVEL_CASH_URL = "https://www.wesalute.com/offer/53361-get-250-travel-cash";
+import { TRAVEL_CASH_250_URL } from "@/lib/links";
 
 const benefits = [
   [
@@ -101,7 +100,7 @@ export function TravelCash() {
             </ul>
 
             <a
-              href={TRAVEL_CASH_URL}
+              href={TRAVEL_CASH_250_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="cta cta-gold"

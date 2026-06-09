@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { X } from "lucide-react";
+import { TRAVEL_CASH_250_URL } from "@/lib/links";
 
 export function MobileCTABar() {
   const [dismissed, setDismissed] = useState(false);
@@ -21,12 +22,15 @@ export function MobileCTABar() {
     >
       <div className="flex items-center gap-2 px-3 py-2.5">
         {/* Primary */}
-        <button
+        <a
+          href={TRAVEL_CASH_250_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex-1 font-condensed font-bold text-[13px] tracking-[0.18em] uppercase text-slate bg-gold flex items-center justify-center gap-2 transition-colors"
-          style={{ height: "44px", border: "none", cursor: "pointer" }}
+          style={{ height: "44px", textDecoration: "none" }}
         >
           Claim $250 Travel Cash
-        </button>
+        </a>
 
         {/* Dismiss */}
         <button

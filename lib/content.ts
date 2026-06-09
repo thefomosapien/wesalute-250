@@ -17,21 +17,6 @@ export type Community = {
   since: string;
 };
 
-export type OpenMerchItem = {
-  name: string;
-  type: string;
-  desc: string;
-  price: string;
-  tag: string;
-};
-
-export type SingleMerchItem = {
-  name: string;
-  type: string;
-  desc: string;
-  price: string;
-};
-
 export const timeline: TimelineEntry[] = [
   {
     year: "1775",
@@ -171,41 +156,3 @@ export const communities: Community[] = [
     since: "The next 250",
   },
 ];
-
-export const merchOpen: OpenMerchItem[] = [
-  {
-    name: "1776 / 2026 Heritage Tee",
-    type: "Hero piece",
-    desc: "Heavyweight garment-dyed tee. Embossed crest with letterpress texture. 1776 left of the WeSalute mark. 2026 right. Built to last.",
-    price: "$48",
-    tag: "Open Collection",
-  },
-  {
-    name: "Service Through The Centuries Tee",
-    type: "Cross-community hero",
-    desc: "Seven service marks arranged in a single medallion. The visual proof that service has been America's through-line for 250 years.",
-    price: "$48",
-    tag: "Open Collection",
-  },
-  {
-    name: "Block Party Pack",
-    type: "July 4 bundle",
-    desc: "Heritage tee, embroidered 250 cap, koozie, four-sticker pack, kraft gift box. Hosting the block party — bring everything but the grill.",
-    price: "$115",
-    tag: "Bundle",
-  },
-];
-
-export const merch250: SingleMerchItem = {
-  name: "The 250 Numbered Edition",
-  type: "Limited to 250",
-  desc: "Premium 14oz garment-dyed pullover hoodie. Embroidered front crest. Individually numbered hangtag, 1 of 250 through 250 of 250. When they're gone, they're gone — and they will be gone.",
-  price: "$145",
-};
-
-export const merchMember: SingleMerchItem = {
-  name: "WeSalute+ 250 Member Edition",
-  type: "Members only",
-  desc: "Hard-enamel pin and embroidered patch set. Antique gold, heritage navy, cream. Numbered tin packaging. Reserved for verified WeSalute+ Members. Not sold to non-Members.",
-  price: "$45",
-};

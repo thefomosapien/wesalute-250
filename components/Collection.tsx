@@ -1,14 +1,18 @@
 import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { SectionTitle, Italic } from "./SectionTitle";
-
-const SHOP_BASE = "https://merchandise.wesalute.com/products";
+import {
+  SHOP_PRODUCT_BASE_URL,
+  COLLECTION_LIMITED_URL,
+  COLLECTION_MEMBER_URL,
+  COLLECTION_GIFTS_URL,
+} from "@/lib/links";
 
 const collections = [
   {
     title: "WeSalute 250 — Limited Edition",
     handle: "wesalute-250-limited-edition",
-    collectionUrl: "https://merchandise.wesalute.com/collections/wesalute-250-limited-edition",
+    collectionUrl: COLLECTION_LIMITED_URL,
     desc: "Designs honoring every community that has answered the call — military, veterans, first responders, nurses, educators, and civil servants. Each design limited to 250 orders.",
     tag: "Limited Edition",
     tagColor: "#FFC43E",
@@ -42,7 +46,7 @@ const collections = [
   {
     title: "America 250 — WeSalute+ Exclusive Merch",
     handle: "wesalute-250-member-edition",
-    collectionUrl: "https://merchandise.wesalute.com/collections/wesalute-250-member-edition",
+    collectionUrl: COLLECTION_MEMBER_URL,
     desc: "Exclusive merch for WeSalute+ Members — not available anywhere else in the WeSalute 250 collection. Our way of recognizing the people who made this community what it is.",
     tag: "Members Only",
     tagColor: "#B5DFD0",
@@ -76,7 +80,7 @@ const collections = [
   {
     title: "Gifts & Bundles",
     handle: "gifts-bundles",
-    collectionUrl: "https://merchandise.wesalute.com/collections/gifts-bundles",
+    collectionUrl: COLLECTION_GIFTS_URL,
     desc: "Curated gift sets for the moments that matter — military retirements, Nurses Week, Veterans Day, and every occasion when someone just deserves to be acknowledged.",
     tag: "Gift Sets",
     tagColor: "#FFC43E",
@@ -134,7 +138,7 @@ export function Collection() {
                     {col.products.slice(0, 4).map((p) => (
                       <a
                         key={p.handle}
-                        href={`${SHOP_BASE}/${p.handle}`}
+                        href={`${SHOP_PRODUCT_BASE_URL}/${p.handle}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative overflow-hidden block"
@@ -152,7 +156,7 @@ export function Collection() {
                   </div>
                 ) : (
                   <a
-                    href={`${SHOP_BASE}/${col.products[0].handle}`}
+                    href={`${SHOP_PRODUCT_BASE_URL}/${col.products[0].handle}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="absolute inset-0 block"

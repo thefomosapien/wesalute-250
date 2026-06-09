@@ -11,6 +11,10 @@ const servicePhotos = [
   { src: "/images/teacher-student-2.png", label: "Teachers" },
 ] as const;
 
+const photoOverlayStyle: React.CSSProperties = {
+  background: "linear-gradient(to top, rgba(0,15,28,0.5) 0%, transparent 50%)",
+};
+
 export function SevenCommunities() {
   return (
     <section
@@ -46,7 +50,7 @@ export function SevenCommunities() {
             />
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{ background: "linear-gradient(to top, rgba(0,15,28,0.5) 0%, transparent 50%)" }}
+              style={photoOverlayStyle}
             />
           </div>
 
@@ -61,7 +65,7 @@ export function SevenCommunities() {
             />
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{ background: "linear-gradient(to top, rgba(0,15,28,0.5) 0%, transparent 50%)" }}
+              style={photoOverlayStyle}
             />
           </div>
 
@@ -76,7 +80,7 @@ export function SevenCommunities() {
             />
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{ background: "linear-gradient(to top, rgba(0,15,28,0.5) 0%, transparent 50%)" }}
+              style={photoOverlayStyle}
             />
           </div>
         </div>

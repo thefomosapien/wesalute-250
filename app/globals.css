@@ -70,9 +70,6 @@
     padding-bottom: 2px;
   }
 
-  .stats-grid          { grid-template-columns: repeat(4, 1fr); }
-  .travel-cash-numeral { font-size: clamp(8rem, 16vw, 12rem); }
-
   .photo-editorial-grid { display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: 210px 210px; gap: 8px; }
   .photo-editorial-left { grid-row: span 2; }
 }
@@ -83,15 +80,6 @@
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s;
   }
   .hover-lift:hover { transform: translateY(-4px); }
-
-  .merch-card {
-    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  .merch-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(255, 196, 62, 0.67) !important;
-  }
-  .merch-card:hover .merch-mark { transform: scale(1.08); }
 
   .cta {
     font-family: var(--font-barlow-condensed), sans-serif;
@@ -136,8 +124,6 @@
 /* ── Responsive overrides ─────────────────────────────────────────── */
 /* ── Mobile overrides ─────────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .stats-grid             { grid-template-columns: repeat(2, 1fr) !important; }
-  .travel-cash-numeral    { font-size: clamp(4rem, 20vw, 6rem) !important; }
   .cta                    { letter-spacing: 0.14em; padding: 16px 24px; }
   .photo-editorial-grid   { grid-template-columns: 1fr !important; grid-template-rows: 200px 160px 160px !important; }
   .photo-editorial-left   { grid-row: span 1 !important; }
@@ -148,9 +134,6 @@
   .timeline-side-right { order: 2; }
   .timeline-side-left  { order: 1; text-align: left !important; padding-right: 0 !important; }
   .hero-grid       { grid-template-columns: 1fr !important; gap: 32px !important; }
-  .merch-grid-3    { grid-template-columns: 1fr !important; }
   .seven-grid      { grid-template-columns: 1fr !important; }
-  .numbered-grid   { grid-template-columns: 1fr !important; }
-  .member-grid     { grid-template-columns: 1fr !important; }
   .timeline-spine  { display: none !important; }
 }

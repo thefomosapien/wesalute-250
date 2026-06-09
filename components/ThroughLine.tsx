@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { Eyebrow } from "./Eyebrow";
 import { SectionTitle, Italic } from "./SectionTitle";
-
-const SHOP_BASE = "https://merchandise.wesalute.com/products";
-const SHOP_ALL_URL = "https://merchandise.wesalute.com/collections/wesalute-250-limited-edition";
+import { SHOP_PRODUCT_BASE_URL, COLLECTION_LIMITED_URL } from "@/lib/links";
 
 const featuredProducts = [
   {
@@ -107,7 +105,7 @@ export function ThroughLine() {
               </p>
             </div>
             <a
-              href={SHOP_ALL_URL}
+              href={COLLECTION_LIMITED_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-condensed font-bold text-[12px] tracking-[0.2em] uppercase text-gold shrink-0 ml-6"
@@ -128,7 +126,7 @@ export function ThroughLine() {
             {featuredProducts.map((product) => (
               <a
                 key={product.handle}
-                href={`${SHOP_BASE}/${product.handle}`}
+                href={`${SHOP_PRODUCT_BASE_URL}/${product.handle}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group cursor-pointer"

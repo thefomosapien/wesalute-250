@@ -2,6 +2,7 @@ import { StarField } from "./StarField";
 import { Eyebrow } from "./Eyebrow";
 import { Italic } from "./SectionTitle";
 import { America250Logo } from "./America250Logo";
+import { TRAVEL_CASH_250_URL, COLLECTION_LIMITED_URL } from "@/lib/links";
 
 
 export function Hero() {
@@ -65,7 +66,7 @@ export function Hero() {
 
           <div className="reveal reveal-4 flex gap-4 flex-wrap">
             <a
-              href="https://www.wesalute.com/offer/53361-get-250-travel-cash"
+              href={TRAVEL_CASH_250_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="cta cta-gold"
@@ -75,7 +76,7 @@ export function Hero() {
               <span className="font-display text-[16px]">→</span>
             </a>
             <a
-              href="https://merchandise.wesalute.com/collections/wesalute-250-limited-edition"
+              href={COLLECTION_LIMITED_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="cta cta-ghost"
@@ -134,7 +135,7 @@ export function Hero() {
               />
             ))}
 
-            <America250Logo size={360} bg="#F4F0E6" />
+            <America250Logo size={360} />
 
             {/* Co-brand lockup beneath the mark */}
             <div
