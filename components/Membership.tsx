@@ -58,7 +58,7 @@ export function Membership() {
             >
               Get{" "}
               <Italic color="#FFC43E">A Real Thank You<sup>&reg;</sup></Italic>
-              {" "}with WeSalute+.
+              {" "}with WeSalute+
             </h2>
             <p
               className="text-[1.08rem] leading-[1.65] text-cream mb-8"
